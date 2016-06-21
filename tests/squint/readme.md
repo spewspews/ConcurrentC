@@ -2,7 +2,7 @@ Squinting at Power Series
 =========================
 
 This code is a translation of the code in
-[Squinting at Power Series](http://swtch.com/~rsc/thread/squint.pdf)
+[Squinting at Power Series](http://www.cs.dartmouth.edu/~doug/squint.ps.gz)
 into C using the concurrent extensions to KenCC.
 
 There are a few differences:

@@ -254,7 +254,7 @@ int @pidchan;
 int inpid, p[2];
 
 void
-start()
+start(void)
 {
 	chanset(pidchan, 0);
 	paused = 1;
@@ -262,7 +262,7 @@ start()
 }
 
 void
-startstop()
+startstop(void)
 {
 	Waitmsg *w;
 

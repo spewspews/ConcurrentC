@@ -54,7 +54,7 @@
  *	-v		verbose printing
  *	-w		print warnings
  *	-x
- *	-y
+ *	-y		print comma re-writes
  */
 
 void

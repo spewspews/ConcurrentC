@@ -4,7 +4,7 @@ all:V:	ccc.ps
 
 clean:
 	rm ccc.ps
-
+	rm ccc.pdf
 
 %.ps:D:	%.ms
 	mac=(-ms)
@@ -12,3 +12,6 @@ clean:
 	{ echo $FONTS; cat $stem.ms } | pic | tbl | eqn | 
 		troff $mac | lp -dstdout > $target
 	/sys/doc/cleanps $target
+
+%.pdf:D: %.ps
+	ps2pdf $stem.ps $target

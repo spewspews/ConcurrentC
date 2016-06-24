@@ -100,7 +100,7 @@ for declarations of typed Channels. A typed channel
 has a type associated with it; only values of that
 type may be sent or received from the channel. The
 .CW @
-symbol has the same precedence as the pointer de-reference
+symbol has the same precedence as the pointer dereference
 .CW *
 and functions similarly. Thus
 .DS
@@ -127,7 +127,7 @@ a pointer to an int.
 .LP
 The
 .CW @
-symbol can be viewed as a special kind of de-reference.
+symbol can be viewed as a special kind of dereference.
 It represents the value in the channel.
 .NH 2
 Channel Allocation
@@ -172,7 +172,7 @@ receives an int from the channel
 .CW c
 and assigns the value to
 .CW i.
-This can be thought of as a kind of de-reference that first
+This can be thought of as a kind of dereference that first
 calls into the
 .I thread (2)
 library in order to have the value available in
@@ -324,7 +324,7 @@ chan @= val	Channel Send
 .sp .2
 _
 .sp .2
-@chan	Channel de-reference (receive)
+@chan	Channel dereference (receive)
 .sp .2
 _
 .sp .2
@@ -353,7 +353,7 @@ Figure 1.  Summary of compiler extensions and usage.
 .CW chan
 denotes a typed channel and
 .CW val
-is of the channel's type.
+is of the channel's sending type.
 .CW nelem
 is an int and
 .CW stksize

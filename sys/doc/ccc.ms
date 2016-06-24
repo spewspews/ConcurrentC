@@ -69,16 +69,18 @@ and
 .CW cothread
 can have any signature, though its return value will not
 be used. Instead of applying the function to its arguments,
-the calls to
+the calls of
 .CW cothread
 and
 .CW coproc
 tell the compiler to check the arguments to the function
-and then compile a call to thread to start the function
+and then compile a call into
+.I thread (2)
+to start the function
 in a new thread or process with a memory allocated stack
 (see
 .I malloc (2)).
-Thus, if
+Due to the type-checking, if
 .CW a ,
 .CW b ,
 and
@@ -88,7 +90,7 @@ are of an incompatible type to
 .CW double ,
 and
 .CW char*
-respectively, then the above will not compile.
+respectively, then the example above will not compile.
 .NH 2
 Channel Declarations
 .LP

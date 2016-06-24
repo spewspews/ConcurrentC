@@ -328,11 +328,11 @@ _
 .sp .2
 _
 .sp .2
-switch @{...}	Blocking alt switch
+switch @{...}	Blocking alt-switch
 .sp .2
 _
 .sp .2
-switch @@{...}	Non-blocking alt switch
+switch @@{...}	Non-blocking alt-switch
 .sp .2
 _
 .sp .2

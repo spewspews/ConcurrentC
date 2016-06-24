@@ -224,8 +224,9 @@ is interrupted.
 .CW
 .ta .1i .6i 1.1i 1.6i
 	int @ichan, @req, i;
-	char *@schan;
+	char *@schan, *s;
 
+	s = "hello";
 	switch @{
 	alt i = @ichan:
 		print("%d\en", i);
@@ -234,7 +235,7 @@ is interrupted.
 	alt @req:
 		...
 		break;
-	alt schan @= "hello":
+	alt schan @= s:
 		print("Sent hello\en");
 		...
 		break;
@@ -289,7 +290,7 @@ labeled by
 .LP
 The channel send operation in an
 .CW alt
-label is slightly more restricted than an ordinary channel
+label is more restricted than an ordinary channel
 send in the sense that the right
 hand side of the
 .CW @=

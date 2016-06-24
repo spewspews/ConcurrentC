@@ -175,5 +175,192 @@ and assigns the value to
 This can be thought of as a kind of de-reference that first
 calls into the
 .I thread (2)
-library in order to retrieve have the value available in
+library in order to have the value available in
 the channel.
+.LP
+A new binary operator
+.CW @=
+is used to send into a channel.
+The left-hand side of the expression must be a channel
+and the right-hand
+side's type must match the type of the values the channel
+is allowed to send/receive.
+Thus given
+.DS
+.CW
+.ta .1i
+	char *@c;
+.DE
+the statement
+.DS
+.CW
+.ta .1i
+	c @= "hello, world";
+.DE
+completes a send into the channel. The statement always
+evaluates to an int: 1 on succes and -1 if the send
+was interrupted.
+.NH 2
+Sending/Receiving of Multiple Channels
+.LP
+Channel sending/receiving may be multiplexed on a
+single statement using a new control flow statement called
+the alt-switch. It is similar
+to a switch with the expression value replaced by an
+.CW @
+character and the
+.CW case
+keywords replaced by a new extension keyword
+.CW alt .
+Instead of constant expressions, each
+.CW alt
+is labeled by potential channel sends or receives. An optional
+default label handles the case where the underlying
+.CW doalt
+operation (see
+.I thread (2))
+is interrupted.
+.DS
+.CW
+.ta .1i .6i 1.1i 1.6i
+	int @ichan, @req, i;
+	char *@schan;
+
+	switch @{
+	alt i = @ichan:
+		print("%d\en", i);
+		...
+		break;
+	alt @req:
+		...
+		break;
+	alt schan @= "hello":
+		print("Sent hello\en");
+		...
+		break;
+	default:
+		print("Interrupted!\en");
+	}
+.DE
+.LP
+In the example above three potential channel operations
+are "multiplexed" on one alt-switch statement. Either an int is received from
+.CW @ichan
+and assigned to
+.CW i ,
+an int is received from
+.CW @req
+and its value thrown away, or the string
+.CW
+"hello"
+.R
+is sent into
+.CW schan .
+The operations are multiplexed in the sense that
+if at least one of those channel operations
+can proceed, one is chosen at random to be executed and
+control flow proceeds after the corresponding
+.CW alt
+label. Otherwise the alt-switch statement blocks until
+one of the operations can proceed.
+.LP
+A non-blocking alt-switch statement is specified by using
+two
+.CW @
+symbols:
+.DS
+.CW
+.TA .1i .6i 1.1i 1.6i
+	switch @@{
+			...
+		default:
+		print("No channel operations can proceed.\en");
+	}
+.DE
+.LP
+In this case, the statement does not block if no channel
+operations can proceed, but immediately continues execution
+at the default label. If a non-blocking alt-switch is interrupted
+while in the middle of executing a valid channel operation,
+then the alt-switch will continue execution at a
+.CW case
+labeled by
+.CW -1 .
+.LP
+The channel send operation in an
+.CW alt
+label is slightly more restricted than an ordinary channel
+send in the sense that the right
+hand side of the
+.CW @=
+binary operator must be addressable. Thus
+.DS
+.CW
+.TA .1i
+	alt ichan @= 5:
+.DE
+will not compile.
+.NH
+Summary of the Extension
+.LP
+In total the extension reserves the following new keywords
+or symbols
+.TS
+center;
+cfCW cfCW cfCW cfCW cfCW.
+@ alt	chanset	cothread	coproc
+.TE
+and defines the following new expressions or statements:
+.TS
+center box;
+cB s
+cfCW | l.
+.sp .2
+Usage Summary
+.sp .2
+=
+.sp .2
+chan @= val	Channel Send
+.sp .2
+_
+.sp .2
+@chan	Channel de-reference (receive)
+.sp .2
+_
+.sp .2
+switch @{...}	Blocking alt switch
+.sp .2
+_
+.sp .2
+switch @@{...}	Non-blocking alt switch
+.sp .2
+_
+.sp .2
+chanset(chan, nelem)	Allocates and readies a channel
+.sp .2
+_
+.sp .2
+coproc(fn(...), stksize)	Starts a process in its own stack
+.sp .2
+_
+.sp .2
+cothread(fn(...), stksize)	Starts a thread in its own stack
+.TE
+.LP
+.ps 8
+.vs 10
+Figure 1.  Summary of compiler extensions and usage.
+.CW chan
+denotes a typed channel and
+.CW val
+is of the channel's type.
+.CW nelem
+is an int and
+.CW stksize
+is an unsigned int.
+.sp
+.NH
+Implementation
+.LP
+See /sys/src/cmd/cc/thread.c (I will actually write something here
+soon I promise).

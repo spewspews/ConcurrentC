@@ -1,6 +1,11 @@
 </sys/doc/fonts
 
-all:V:	ccc.ps
+ps:V:	ccc.ps
+
+pdf:V:	ccc.pdf
+	
+view:	ps
+	page -R ccc.ps
 
 clean:
 	rm ccc.ps

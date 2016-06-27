@@ -11,7 +11,6 @@ struct Mainarg
 };
 
 int	mainstacksize;
-int rtstacksize;
 int	_threadnotefd;
 int	_threadpasserpid;
 static jmp_buf _mainjmp;
@@ -40,8 +39,6 @@ main(int argc, char **argv)
 	notify(_threadnote);
 	if(mainstacksize == 0)
 		mainstacksize = 8*1024;
-	if(rtstacksize == 0)
-		rtstacksize = 8*1024;
 
 	a = _threadmalloc(sizeof *a, 1);
 	a->argc = argc;

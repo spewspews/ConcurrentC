@@ -57,9 +57,9 @@ newthread(Proc *p, int argc, void *fn, void **argv, uint stacksize, char *name, 
 }
 
 int
-rtthreadcreate(int argc, void *f, ...)
+rtthreadcreate(uint stacksize, int argc, void *f, ...)
 {
-	return newthread(_threadgetproc(), argc, f, &f+1, rtstacksize, nil, threadgetgrp());
+	return newthread(_threadgetproc(), argc, f, &f+1, stacksize, nil, threadgetgrp());
 }
 
 /* 
@@ -97,14 +97,14 @@ _newproc(int argc, void *fn, void **arg, uint stacksize, char *name, int grp, in
 }
 
 int
-rtproccreate(int argc, void *f, ...)
+rtproccreate(uint stacksize, int argc, void *f, ...)
 {
 	Proc *p;
 	int id;
 
 	p = _threadgetproc();
 	assert(p->newproc == nil);
-	p->newproc = _newproc(argc, f, &f+1, rtstacksize, nil, p->thread->grp, 0);
+	p->newproc = _newproc(argc, f, &f+1, stacksize, nil, p->thread->grp, 0);
 	id = p->newproc->threads.head->id;
 	_sched();
 	return id;

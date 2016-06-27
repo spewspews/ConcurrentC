@@ -273,8 +273,8 @@ symbols:
 .CW
 .TA .1i .6i 1.1i 1.6i
 	switch @@{
-			...
-		default:
+		...
+	default:
 		print("No channel operations can proceed.\en");
 	}
 .DE
@@ -315,17 +315,40 @@ and defines the following new expressions or statements:
 .TS
 center box;
 cB s
+cB s
+cfCW | l
+cfCW | l
+cfCW | l
+cB s
+cfCW | l
+cfCW | l
+cfCW | l
+cfCW | l
+cfCW | l
+cB s
 cfCW | l.
 .sp .2
 Usage Summary
 .sp .2
 =
 .sp .2
+Channel Operations
+.sp .2
+_
+.sp .2
+chanset(chan, nelem)	Allocates and readies a channel
+.sp .2
+_
+.sp .2
 chan @= val	Channel Send
 .sp .2
 _
 .sp .2
 @chan	Channel dereference (receive)
+.sp .2
+_
+.sp .2
+Alt-Switch
 .sp .2
 _
 .sp .2
@@ -337,7 +360,19 @@ switch @@{...}	Non-blocking alt-switch
 .sp .2
 _
 .sp .2
-chanset(chan, nelem)	Allocates and readies a channel
+alt val = @chan:	Alt label (receive)
+.sp .2
+_
+.sp .2
+alt @chan:	Alt label (receive, value thrown away)
+.sp .2
+_
+.sp .2
+alt chan @= val:	Alt label (send)
+.sp .2
+_
+.sp .2
+Thread Creation
 .sp .2
 _
 .sp .2
@@ -356,7 +391,9 @@ denotes a typed channel and
 .CW val
 is of the channel's sending type.
 .CW nelem
-is an int and
+is an int,
+.CW fn
+is a function of any signature, and
 .CW stksize
 is an unsigned int.
 .sp

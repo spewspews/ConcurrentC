@@ -25,7 +25,7 @@ symnod(Sym *s)
 {
 	Node *n;
 
-	n = new(ONAME, Z, Z);
+	n = new1(ONAME, Z, Z);
 	n->sym = s;
 	n->type = s->type;
 	if(s->type != T)
@@ -36,27 +36,27 @@ symnod(Sym *s)
 }
 
 Node*
-thrdnod(int o, Node *n)
+thrdnod(int o, Node *fn, Node *stk)
 {
-	Node *n1, *args, *c;
+	Node *n, *args, *c;
 	Sym *s;
 	int argc;
 
-	if(n->op != OFUNC) {
-		diag(n, "Not a function application for op %O", o);
+	if(fn->op != OFUNC) {
+		diag(fn, "Not a function application for op %O", o);
 		return Z;
 	}
 
-	n1 = copynod(n);
-	tcom(n1);
+	n = copynod(fn);
+	tcom(n);
 
-	argc = countargs(n1->right);
+	argc = countargs(n->right);
 	if(argc == 0) {
 		args = new(OCONST, Z, Z);
 		args->type = types[TINT];
 		args->vconst = 0;
 	} else
-		args = n->right;
+		args = fn->right;
 
 	c = new(OCONST, Z, Z);
 	c->type = types[TINT];
@@ -78,8 +78,9 @@ thrdnod(int o, Node *n)
 		return nil;
 	}
 
-	n = new(OLIST, n->left, args);
+	n = new(OLIST, fn->left, args);
 	n = new(OLIST, c, n);
+	n = new(OLIST, stk, n);
 	return new(OFUNC, symnod(s), n);
 }
 
@@ -102,7 +103,7 @@ chanalloc(Node *c, Node *elems)
 Node*
 chanval(Node *n, int op)
 {
-	n = new(ODOT, new(OIND, n, Z), Z);
+	n = new1(ODOT, new(OIND, n, Z), Z);
 	if(op == OSEND)
 		n->sym = slookup("@in");
 	else
@@ -132,8 +133,8 @@ chanop(int op, Node *n)
 		return Z;
 	}
 
-	n = new(OLIST, copynod(n), new(OADDR, chanval(n, op), Z));
-	return new(OFUNC, symnod(s), n);
+	n = new1(OLIST, copynod(n), new1(OADDR, chanval(n, op), Z));
+	return new1(OFUNC, symnod(s), n);
 
 }
 
@@ -173,10 +174,10 @@ altcase(Node *n, Node **i)
 	Sym *s;
 
 	switch(n->op) {
-	case ORECV:
+	case OALTRECV:
 		s = slookup("CHANRCV");
 		break;
-	case OSEND:
+	case OALTSEND:
 		s = slookup("CHANSND");
 		break;
 	default:

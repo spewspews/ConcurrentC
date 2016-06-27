@@ -420,15 +420,15 @@ label:
 	}
 |	LALT '@' expr ':'
 	{
-		$$ = new(ORECV, Z, $3);
+		$$ = new(OALTRECV, Z, $3);
 	}
 |	LALT expr '=' '@' expr ':'
 	{
-		$$ = new(ORECV, $2, $5);
+		$$ = new(OALTRECV, $2, $5);
 	}
 |	LALT expr LSNDE expr ':'
 	{
-		$$ = new(OSEND, $4, $2);
+		$$ = new(OALTSEND, $4, $2);
 	}
 
 stmnt:
@@ -767,15 +767,15 @@ uexpr:
 	}
 |	'@' xuexpr
 	{
-		$$ = new(OCOMMA, chanop(ORECV, copynod($2)), chanval($2, ORECV));
+		$$ = new(ORECV, $2, Z);
 	}
-|	LCOTHREAD uexpr
+|	LCOTHREAD '(' uexpr ',' uexpr ')'
 	{
-		$$ = thrdnod(OCOTHREAD, $2);
+		$$ = thrdnod(OCOTHREAD, $3, $5);
 	}
-|	LCOPROC uexpr
+|	LCOPROC '(' uexpr ',' uexpr ')'
 	{
-		$$ = thrdnod(OCOPROC, $2);
+		$$ = thrdnod(OCOPROC, $3, $5);
 	}
 
 pexpr:

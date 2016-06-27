@@ -161,17 +161,14 @@ loop:
 	switch(o) {
 
 	default:
+		if(recv(n))
+			goto loop;
 		complex(n);
 		cgen(n, Z);
 		break;
 
-	//TODO come back to this
-	case OCOMMA:
-		if(n->right->op == ODOT && n->right->sym == slookup("@out")) {
-			gen(n->left);
-			break;
-		}
 	case OLIST:
+	case OCOMMA:
 		gen(n->left);
 
 	rloop:
@@ -179,6 +176,8 @@ loop:
 		goto loop;
 
 	case ORETURN:
+		if(recv(n))
+			goto loop;
 		canreach = 0;
 		warnreach = !suppress;
 		complex(n);
@@ -289,6 +288,7 @@ loop:
 
 	case OSWITCH:
 		l = n->left;
+		recv(l);
 		complex(l);
 		if(l->type == T)
 			break;
@@ -341,6 +341,7 @@ loop:
 	case OWHILE:
 	case ODWHILE:
 		l = n->left;
+		recv(l);
 		gbranch(OGOTO);		/* entry */
 		sp = p;
 
@@ -385,6 +386,7 @@ loop:
 			warn(n, "unreachable code FOR");
 			warnreach = 0;
 		}
+		recv(l->right->left);
 		gen(l->right->left);	/* init */
 		gbranch(OGOTO);		/* entry */
 		sp = p;
@@ -413,9 +415,11 @@ loop:
 		spb = p;
 
 		patch(spc, pc);
+		recv(l->right->right);
 		gen(l->right->right);	/* inc */
 		patch(sp, pc);	
 		if(l->left != Z) {	/* test */
+			recv(l->left);
 			bcomplex(l->left, Z);
 			patch(p, breakpc);
 			if(l->left->op != OCONST || vconst(l->left) == 0)
@@ -478,6 +482,7 @@ loop:
 
 	case OIF:
 		l = n->left;
+		recv(l);
 		if(bcomplex(l, n->right)) {
 			if(typefd[l->type->etype])
 				f = !l->fconst;
@@ -535,6 +540,8 @@ loop:
 
 	case OSET:
 	case OUSED:
+		if(recv(n))
+			goto loop;
 		usedset(n->left, o);
 		break;
 	}

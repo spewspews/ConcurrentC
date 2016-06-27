@@ -8,6 +8,7 @@ struct Com
 };
 
 int compar(Node*, int);
+static Node* recvs(Com*, Node*);
 static void comma(Node*);
 static Node*	commas(Com*, Node*);
 
@@ -904,6 +905,48 @@ tlvalue(Node *n)
 		return 1;
 	}
 	return 0;
+}
+
+static Node*
+recvs(Com *com, Node *n)
+{
+	if(n == Z)
+		return Z;
+
+	n->left = recvs(com, n->left);
+	if(n->op == ORECV) {
+		com->t[com->n++] = chanop(ORECV, copynod(n->left));
+		return chanval(n->left, ORECV);
+	}
+	n->right = recvs(com, n->right);
+	return n;
+}
+
+int
+recv(Node *n)
+{
+	Com com;
+	Node *nn;
+	int r;
+
+	r = 0;
+	com.n = 0;
+	nn = recvs(&com, n);
+	if(com.n > 0)
+		r = 1;
+	if(nn != n)
+		*n = *com.t[--com.n];
+	while(com.n > 0) {
+		nn = new(OXXX, Z, Z);
+		*nn = *n;
+		n->op = OCOMMA;
+		n->type = nn->type;
+		n->left = com.t[--com.n];
+		n->right = nn;
+		n->lineno = n->left->lineno;
+	}
+		
+	return r;
 }
 
 /*

@@ -3,6 +3,8 @@
 ps:V:	ccc.ps
 
 pdf:V:	ccc.pdf
+
+all:V: pdf ps
 	
 view:	ps
 	page -R ccc.ps

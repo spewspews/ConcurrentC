@@ -204,6 +204,8 @@ enum
 	OXXX,
 	OADD,
 	OADDR,
+	OALTSEND,
+	OALTRECV,
 	OAND,
 	OANDAND,
 	OARRAY,
@@ -649,6 +651,8 @@ int	tlvalue(Node*);
 void	constas(Node*, Type*, Type*);
 Node*	uncomma(Node*);
 Node*	uncomargs(Node*);
+int	recv(Node*);
+
 
 /*
  * con.c
@@ -671,7 +675,7 @@ void	dclfunct(Type*, Sym*);
  * thread.c
  */
 int	countargs(Node*);
-Node*	thrdnod(int, Node*);
+Node*	thrdnod(int, Node*, Node*);
 Sym*	chansym(Node*);
 Node*	chanval(Node*, int);
 Node*	chanop(int, Node*);

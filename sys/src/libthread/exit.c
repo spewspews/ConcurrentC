@@ -91,7 +91,7 @@ threadwaitchanext(void)
 	chanset(waitchan, 0);
 	if(_threadwaitchan==nil) {
 		_threadwaitchan = chancreate(sizeof(Waitmsg*), 16);
-		cothread waitthread(waitchan);
+		cothread(waitthread(waitchan), 1024);
 	}
 	return waitchan;
 }

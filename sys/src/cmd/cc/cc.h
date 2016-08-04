@@ -651,7 +651,7 @@ int	tlvalue(Node*);
 void	constas(Node*, Type*, Type*);
 Node*	uncomma(Node*);
 Node*	uncomargs(Node*);
-int	recv(Node*);
+int	recv(Node*, int);
 
 
 /*

@@ -5,7 +5,7 @@
 #include <tos.h>
 
 char *_threadexitsallstatus;
-Channel *_threadwaitchan;
+Waitmsg *@_threadwaitchan;
 
 void
 threadexits(char *exitstr)
@@ -63,37 +63,12 @@ threadexitsall(char *exitstr)
 	exits(exitstr);
 }
 
-Channel*
+Waitmsg*@
 threadwaitchan(void)
 {
 	if(_threadwaitchan==nil)
-		_threadwaitchan = chancreate(sizeof(Waitmsg*), 16);
+		chanset(_threadwaitchan, 16);
 	return _threadwaitchan;
-}
-
-void
-waitthread(Waitmsg *@waitchan)
-{
-	Waitmsg *m;
-
-	threadsetname("waitthread");
-	for(;;) {
-		recv(_threadwaitchan, &m);
-		waitchan @= m;
-	}
-}
-
-Waitmsg*@
-threadwaitchanext(void)
-{
-	Waitmsg *@waitchan;
-
-	chanset(waitchan, 0);
-	if(_threadwaitchan==nil) {
-		_threadwaitchan = chancreate(sizeof(Waitmsg*), 16);
-		cothread(waitthread(waitchan), 1024);
-	}
-	return waitchan;
 }
 	
 void

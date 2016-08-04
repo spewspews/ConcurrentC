@@ -186,7 +186,7 @@ void**	_workerdata(void);
 extern int			_threaddebuglevel;
 extern char*		_threadexitsallstatus;
 extern Pqueue		_threadpq;
-extern Channel*	_threadwaitchan;
+extern Waitmsg*@	_threadwaitchan;
 extern Rgrp		_threadrgrp;
 
 #define DBGAPPL	(1 << 0)

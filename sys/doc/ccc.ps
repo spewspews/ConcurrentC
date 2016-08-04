@@ -3691,369 +3691,373 @@ mark
 (language) 4097 2290 w
 (to) 4582 2290 w
 (provide) 1080 2410 w
-(built-in) 1489 2410 w
-(CSP) 1902 2410 w
-(style) 2124 2410 w
-(concurrency) 2393 2410 w
-(operations.) 3027 2410 w
-(This) 3650 2410 w
-(paper) 3898 2410 w
+(builtin) 1496 2410 w
+(CSP) 1858 2410 w
+(style) 2087 2410 w
+(concurrency) 2363 2410 w
+(operations.) 3004 2410 w
+(This) 3635 2410 w
+(paper) 3891 2410 w
 (describes) 4219 2410 w
 (the usage and implementation of the extension.) 1080 2530 w
 10 /LucidaSans-Demi f
 (1.) 720 2890 w
 (Introduction and Motivation) 873 2890 w
 10 /LucidaSansUnicode00 f
-(CSP-style) 720 3046 w
-(concurrency) 1221 3046 w
-(operations) 1851 3046 w
-(are) 2407 3046 w
-(an) 2599 3046 w
-(essential) 2756 3046 w
-(part) 3222 3046 w
-(of) 3458 3046 w
-(many) 3596 3046 w
-(programs) 3899 3046 w
-(in) 4407 3046 w
-(the) 4539 3046 w
-(Plan) 4735 3046 w
-(9) 4977 3046 w
-(operating) 720 3166 w
-(system.) 1226 3166 w
-(Concurrent) 1638 3166 w
-(programs) 2220 3166 w
-(were) 2727 3166 w
-(originally) 2997 3166 w
-(written) 3485 3166 w
-(in) 3863 3166 w
-(Alef) 3993 3166 w
-(which) 4223 3166 w
-(had) 4543 3166 w
-(built-) 4762 3166 w
-(in) 720 3286 w
-(concurrency) 852 3286 w
-(operations.) 1484 3286 w
-(When) 2074 3286 w
-(Alef) 2382 3286 w
-(was) 2615 3286 w
-(retired,) 2840 3286 w
-(a) 3237 3286 w
-(library) 3334 3286 w
-(was) 3686 3286 w
-(written) 3911 3286 w
-(to) 4292 3286 w
-(allow) 4432 3286 w
-(access) 4725 3286 w
-(to) 720 3406 w
-(CSP) 871 3406 w
-(operations) 1101 3406 w
-(from) 1669 3406 w
-(programs) 1953 3406 w
-(written) 2472 3406 w
-(in) 2863 3406 w
-(C) 3006 3406 w
-(\(see) 3127 3406 w
+(Programming) 720 3046 w
+(with) 1408 3046 w
+(CSP) 1647 3046 w
+(style) 1859 3046 w
+(concurrency) 2118 3046 w
+(is) 2742 3046 w
+(an) 2856 3046 w
+(essential) 3007 3046 w
+(part) 3467 3046 w
+(of) 3697 3046 w
+(the) 3829 3046 w
+(Plan) 4018 3046 w
+(9) 4254 3046 w
+(operating) 4352 3046 w
+(sys\255) 4853 3046 w
+(tem.) 720 3166 w
+(Concurrent) 978 3166 w
+(programs) 1560 3166 w
+(were) 2066 3166 w
+(originally) 2335 3166 w
+(written) 2823 3166 w
+(in) 3201 3166 w
+(Alef) 3331 3166 w
+(which) 3561 3166 w
+(had) 3881 3166 w
+(builtin) 4100 3166 w
+(concurrency) 4450 3166 w
+(operations.) 720 3286 w
+(When) 1313 3286 w
+(Alef) 1624 3286 w
+(was) 1860 3286 w
+(retired,) 2089 3286 w
+(a) 2490 3286 w
+(library) 2591 3286 w
+(was) 2947 3286 w
+(written) 3176 3286 w
+(to) 3561 3286 w
+(allow) 3705 3286 w
+(access) 4002 3286 w
+(to) 4363 3286 w
+(CSP) 4507 3286 w
+(opera\255) 4731 3286 w
+(tions) 720 3406 w
+(from) 999 3406 w
+(programs) 1270 3406 w
+(written) 1776 3406 w
+(in) 2154 3406 w
+(C) 2283 3406 w
+(\(see) 2390 3406 w
 10 /LucidaSans-Italic f
-(thread) 3375 3406 w
+(thread) 2624 3406 w
 10 /LucidaSansUnicode00 f
-(\(2\)\).) 3698 3406 w
-(However,) 3976 3406 w
-(there) 4477 3406 w
-(are) 4781 3406 w
-(a) 4985 3406 w
-(number) 720 3526 w
-(of) 1132 3526 w
-(deficiencies) 1265 3526 w
-(with) 1870 3526 w
+(\(2\)\).) 2947 3406 w
+(However,) 3211 3406 w
+(there) 3698 3406 w
+(are) 3988 3406 w
+(a) 4178 3406 w
+(number) 4271 3406 w
+(of) 4686 3406 w
+(defi\255) 4822 3406 w
+(ciencies) 720 3526 w
+(with) 1155 3526 w
 10 /LucidaSans-Italic f
-(thread) 2110 3526 w
+(thread) 1410 3526 w
 10 /LucidaSansUnicode00 f
-(\(2\);) 2433 3526 w
-(thread) 2630 3526 w
-(creation) 2980 3526 w
-(is) 3408 3526 w
-(inflexible,) 3524 3526 w
-(receiving) 4043 3526 w
-(or) 4517 3526 w
-(sending) 4655 3526 w
-(of) 720 3646 w
-(multiple) 863 3646 w
-(channels) 1306 3646 w
-(requires) 1779 3646 w
-(an) 2223 3646 w
-(awkward) 2384 3646 w
-(definition) 2854 3646 w
-(of) 3363 3646 w
-(an) 3505 3646 w
-(array) 3666 3646 w
-(of) 3954 3646 w
-(structures,) 4096 3646 w
-(and) 4661 3646 w
-(the) 4885 3646 w
-(send/receive) 720 3766 w
-(operations) 1394 3766 w
-(are) 1958 3766 w
-(not) 2158 3766 w
-(type-safe.) 2366 3766 w
-(The) 2911 3766 w
-(extension) 3140 3766 w
-(aims) 3664 3766 w
-(to) 3941 3766 w
-(address) 4088 3766 w
-(those) 4517 3766 w
-(con\255) 4833 3766 w
-(cerns) 720 3886 w
-(to) 1015 3886 w
-(make) 1147 3886 w
-(threaded) 1443 3886 w
-(programs) 1910 3886 w
-(easier) 2411 3886 w
-(and) 2733 3886 w
-(safer) 2947 3886 w
-(to) 3221 3886 w
-(write) 3353 3886 w
-(without) 3627 3886 w
-(the) 4026 3886 w
-(need) 4215 3886 w
-(to) 4486 3886 w
-(maintain) 4618 3886 w
-(a separate compililer infrastructure such as Alef. This document assumes familiarity) 720 4006 w
-(with) 4835 4006 w
+(\(2\):) 1733 3526 w
+(thread) 1944 3526 w
+(creation) 2308 3526 w
+(is) 2750 3526 w
+(inflexible,) 2881 3526 w
+(receiving) 3415 3526 w
+(or) 3904 3526 w
+(sending) 4057 3526 w
+(of) 4493 3526 w
+(multiple) 4642 3526 w
+(channels) 720 3646 w
+(requires) 1186 3646 w
+(an) 1623 3646 w
+(awkward) 1777 3646 w
+(definition) 2240 3646 w
+(of) 2742 3646 w
+(an) 2877 3646 w
+(array) 3031 3646 w
+(of) 3312 3646 w
+(structures,) 3447 3646 w
+(and) 4005 3646 w
+(the) 4222 3646 w
+(send/receive) 4414 3646 w
+(operations) 720 3766 w
+(are) 1282 3766 w
+(not) 1480 3766 w
+(type) 1686 3766 w
+(safe.) 1940 3766 w
+(This) 2217 3766 w
+(extension) 2468 3766 w
+(aims) 2990 3766 w
+(to) 3265 3766 w
+(address) 3410 3766 w
+(those) 3837 3766 w
+(concerns) 4151 3766 w
+(to) 4633 3766 w
+(make) 4778 3766 w
+(threaded) 720 3886 w
+(programs) 1202 3886 w
+(easier) 1718 3886 w
+(and) 2055 3886 w
+(safer) 2284 3886 w
+(to) 2572 3886 w
+(write) 2718 3886 w
+(without) 3006 3886 w
+(the) 3419 3886 w
+(need) 3622 3886 w
+(to) 3907 3886 w
+(maintain) 4053 3886 w
+(a) 4523 3886 w
+(separate) 4626 3886 w
+(compiler infrastructure such as Alef. This document assumes familiarity with) 720 4006 w
 10 /LucidaSans-Italic f
-(thread) 720 4126 w
+(thread) 4480 4006 w
 10 /LucidaSansUnicode00 f
-(\(2\).) 1043 4126 w
+(\(2\).) 4803 4006 w
 10 /LucidaSans-Demi f
-(2.) 720 4366 w
-(The Extensions) 873 4366 w
+(2.) 720 4246 w
+(The Extensions) 873 4246 w
 10 /LucidaSansUnicode00 f
-(The) 720 4522 w
-(compiler) 952 4522 w
-(extension) 1426 4522 w
-(provides) 1952 4522 w
-(for) 2419 4522 w
-(launching) 2609 4522 w
-(new) 3134 4522 w
-(threads) 3380 4522 w
-(and) 3796 4522 w
-(processes,) 4027 4522 w
-(declaring) 4592 4522 w
-(and) 720 4642 w
-(allocating) 951 4642 w
-(storage) 1472 4642 w
-(for) 1886 4642 w
-(typed) 2076 4642 w
-(channels,) 2398 4642 w
-(and) 2909 4642 w
-(type-safe) 3140 4642 w
-(sending) 3655 4642 w
-(and) 4090 4642 w
-(receiving) 4320 4642 w
-(from) 4808 4642 w
-(channels.) 720 4762 w
-(It) 1220 4762 w
-(also) 1326 4762 w
-(provides) 1562 4762 w
-(a) 2018 4762 w
-(new) 2113 4762 w
-(control) 2348 4762 w
-(structure) 2730 4762 w
-(for) 3208 4762 w
-(type-safe) 3388 4762 w
-(sending) 3894 4762 w
-(or) 4320 4762 w
-(receiving) 4463 4762 w
-(of) 4942 4762 w
-(multiple channels.) 720 4882 w
+(The) 720 4402 w
+(compiler) 952 4402 w
+(extension) 1426 4402 w
+(provides) 1952 4402 w
+(for) 2419 4402 w
+(launching) 2609 4402 w
+(new) 3134 4402 w
+(threads) 3380 4402 w
+(and) 3796 4402 w
+(processes,) 4027 4402 w
+(declaring) 4592 4402 w
+(and) 720 4522 w
+(allocating) 952 4522 w
+(storage) 1474 4522 w
+(for) 1889 4522 w
+(typed) 2079 4522 w
+(channels,) 2401 4522 w
+(and) 2912 4522 w
+(type) 3143 4522 w
+(safe) 3402 4522 w
+(sending) 3652 4522 w
+(and) 4088 4522 w
+(receiving) 4319 4522 w
+(from) 4808 4522 w
+(channels.) 720 4642 w
+(It) 1221 4642 w
+(also) 1328 4642 w
+(provides) 1565 4642 w
+(a) 2022 4642 w
+(new) 2118 4642 w
+(control) 2355 4642 w
+(structure) 2739 4642 w
+(for) 3219 4642 w
+(type) 3400 4642 w
+(safe) 3650 4642 w
+(sending) 3891 4642 w
+(or) 4318 4642 w
+(receiving) 4462 4642 w
+(of) 4942 4642 w
+(multiple channels.) 720 4762 w
 10 /LucidaSans-Demi f
-(2.1.) 720 5122 w
-(Thread and Process Creation) 962 5122 w
+(2.1.) 720 5002 w
+(Thread and Process Creation) 962 5002 w
 10 /LucidaSansUnicode00 f
-(Threads) 720 5278 w
-(and) 1148 5278 w
-(processes) 1365 5278 w
-(are) 1883 5278 w
-(created) 2072 5278 w
-(using) 2468 5278 w
-(the) 2771 5278 w
-(keywords) 2963 5278 w
+(Threads) 720 5158 w
+(and) 1148 5158 w
+(processes) 1365 5158 w
+(are) 1883 5158 w
+(created) 2072 5158 w
+(using) 2468 5158 w
+(the) 2771 5158 w
+(keywords) 2963 5158 w
 10 /LucidaTypewriter f
-(coproc) 3459 5278 w
+(coproc) 3459 5158 w
 10 /LucidaSansUnicode00 f
-(and) 3928 5278 w
+(and) 3928 5158 w
 10 /LucidaTypewriter f
-(cothread) 4145 5278 w
+(cothread) 4145 5158 w
 10 /LucidaSansUnicode00 f
-(which) 4759 5278 w
-(has) 720 5398 w
-(the) 935 5398 w
-(syntax) 1137 5398 w
-(of) 1502 5398 w
-(a) 1647 5398 w
-(function) 1749 5398 w
-(that) 2197 5398 w
-(takes) 2435 5398 w
-(two) 2738 5398 w
-(arguments.) 2959 5398 w
-(The) 3556 5398 w
-(first) 3783 5398 w
-(argument) 4024 5398 w
-(a) 4538 5398 w
-(function) 4639 5398 w
-(application,) 720 5518 w
-(and) 1325 5518 w
-(the) 1544 5518 w
-(second) 1738 5518 w
-(is) 2122 5518 w
-(an) 2242 5518 w
-(unsigned) 2399 5518 w
-(int) 2886 5518 w
-(that) 3054 5518 w
-(specifies) 3285 5518 w
-(the) 3748 5518 w
-(stack) 3943 5518 w
-(size) 4235 5518 w
-(for) 4468 5518 w
-(the) 4647 5518 w
-(pro\255) 4842 5518 w
-(cess or thread. The calls) 720 5638 w
+(which) 4759 5158 w
+(have) 720 5278 w
+(the) 988 5278 w
+(syntax) 1186 5278 w
+(of) 1547 5278 w
+(a) 1688 5278 w
+(function) 1786 5278 w
+(that) 2230 5278 w
+(takes) 2463 5278 w
+(two) 2762 5278 w
+(arguments.) 2979 5278 w
+(The) 3572 5278 w
+(first) 3795 5278 w
+(argument) 4032 5278 w
+(a) 4542 5278 w
+(function) 4639 5278 w
+(application,) 720 5398 w
+(and) 1325 5398 w
+(the) 1544 5398 w
+(second) 1738 5398 w
+(is) 2122 5398 w
+(an) 2242 5398 w
+(unsigned) 2399 5398 w
+(int) 2886 5398 w
+(that) 3054 5398 w
+(specifies) 3285 5398 w
+(the) 3748 5398 w
+(stack) 3943 5398 w
+(size) 4235 5398 w
+(for) 4468 5398 w
+(the) 4647 5398 w
+(pro\255) 4842 5398 w
+(cess or thread. The calls) 720 5518 w
 10 /LucidaTypewriter f
-(coproc) 1933 5638 w
+(coproc) 1933 5518 w
 10 /LucidaSansUnicode00 f
-(and) 2397 5638 w
+(and) 2397 5518 w
 10 /LucidaTypewriter f
-(cothread) 2609 5638 w
+(cothread) 2609 5518 w
 10 /LucidaSansUnicode00 f
-(return the resultant thread id.) 3217 5638 w
+(return the resultant thread id.) 3217 5518 w
 10 /LucidaTypewriter f
-(int tid, pid) 1152 5818 w
-(void fn\(int arg1, double arg2, char *arg3\);) 1152 5938 w
-(...) 1152 6058 w
-(tid = cothread\(fn\(a, b, c\), 8192\);) 1152 6178 w
-(pid = coproc\(fn\(a, b, c\), 8192\);) 1152 6298 w
+(int tid, pid) 1152 5698 w
+(void fn\(int arg1, double arg2, char *arg3\);) 1152 5818 w
+(...) 1152 5938 w
+(tid = cothread\(fn\(a, b, c\), 8192\);) 1152 6058 w
+(pid = coproc\(fn\(a, b, c\), 8192\);) 1152 6178 w
 10 /LucidaSansUnicode00 f
-(The) 720 6478 w
-(function) 951 6478 w
-(passed) 1402 6478 w
-(to) 1791 6478 w
+(The) 720 6358 w
+(function) 951 6358 w
+(passed) 1402 6358 w
+(to) 1791 6358 w
 10 /LucidaTypewriter f
-(coproc) 1939 6478 w
+(coproc) 1939 6358 w
 10 /LucidaSansUnicode00 f
-(and) 2421 6478 w
+(and) 2421 6358 w
 10 /LucidaTypewriter f
-(cothread) 2651 6478 w
+(cothread) 2651 6358 w
 10 /LucidaSansUnicode00 f
-(can) 3277 6478 w
-(have) 3495 6478 w
-(any) 3770 6478 w
-(signature,) 3989 6478 w
-(though) 4526 6478 w
-(its) 4923 6478 w
-(return) 720 6598 w
-(value) 1053 6598 w
-(will) 1341 6598 w
-(not) 1539 6598 w
-(be) 1733 6598 w
-(used.) 1886 6598 w
-(Instead) 2184 6598 w
-(of) 2571 6598 w
-(applying) 2702 6598 w
-(the) 3150 6598 w
-(function) 3338 6598 w
-(to) 3772 6598 w
-(its) 3903 6598 w
-(arguments,) 4053 6598 w
-(the) 4637 6598 w
-(calls) 4825 6598 w
-(of) 720 6718 w
+(can) 3277 6358 w
+(have) 3495 6358 w
+(any) 3770 6358 w
+(signature,) 3989 6358 w
+(though) 4526 6358 w
+(its) 4923 6358 w
+(return) 720 6478 w
+(value) 1053 6478 w
+(will) 1341 6478 w
+(not) 1539 6478 w
+(be) 1733 6478 w
+(used.) 1886 6478 w
+(Instead) 2184 6478 w
+(of) 2571 6478 w
+(applying) 2702 6478 w
+(the) 3150 6478 w
+(function) 3338 6478 w
+(to) 3772 6478 w
+(its) 3903 6478 w
+(arguments,) 4053 6478 w
+(the) 4637 6478 w
+(calls) 4825 6478 w
+(of) 720 6598 w
 10 /LucidaTypewriter f
-(cothread) 864 6718 w
+(cothread) 864 6598 w
 10 /LucidaSansUnicode00 f
-(and) 1486 6718 w
+(and) 1486 6598 w
 10 /LucidaTypewriter f
-(coproc) 1712 6718 w
+(coproc) 1712 6598 w
 10 /LucidaSansUnicode00 f
-(tell) 2190 6718 w
-(the) 2387 6718 w
-(compiler) 2588 6718 w
-(to) 3057 6718 w
-(check) 3201 6718 w
-(the) 3525 6718 w
-(arguments) 3726 6718 w
-(to) 4292 6718 w
-(the) 4437 6718 w
-(function) 4639 6718 w
-(and) 720 6838 w
-(then) 943 6838 w
-(compile) 1203 6838 w
-(a) 1628 6838 w
-(call) 1725 6838 w
-(into) 1931 6838 w
+(tell) 2190 6598 w
+(the) 2387 6598 w
+(compiler) 2588 6598 w
+(to) 3057 6598 w
+(check) 3201 6598 w
+(the) 3525 6598 w
+(arguments) 3726 6598 w
+(to) 4292 6598 w
+(the) 4437 6598 w
+(function) 4639 6598 w
+(and) 720 6718 w
+(then) 943 6718 w
+(compile) 1203 6718 w
+(a) 1628 6718 w
+(call) 1725 6718 w
+(into) 1931 6718 w
 10 /LucidaSans-Italic f
-(thread) 2162 6838 w
+(thread) 2162 6718 w
 10 /LucidaSansUnicode00 f
-(\(2\)) 2485 6838 w
-(to) 2656 6838 w
-(start) 2796 6838 w
-(the) 3059 6838 w
-(function) 3256 6838 w
-(in) 3699 6838 w
-(a) 3832 6838 w
-(new) 3929 6838 w
-(thread) 4166 6838 w
-(or) 4522 6838 w
-(process) 4666 6838 w
-(with) 720 6958 w
-(a) 958 6958 w
-(memory) 1046 6958 w
-(allocated) 1475 6958 w
-(stack) 1944 6958 w
-(\(see) 2229 6958 w
+(\(2\)) 2485 6718 w
+(to) 2656 6718 w
+(start) 2796 6718 w
+(the) 3059 6718 w
+(function) 3256 6718 w
+(in) 3699 6718 w
+(a) 3832 6718 w
+(new) 3929 6718 w
+(thread) 4166 6718 w
+(or) 4522 6718 w
+(process) 4666 6718 w
+(with) 720 6838 w
+(a) 958 6838 w
+(memory) 1046 6838 w
+(allocated) 1475 6838 w
+(stack) 1944 6838 w
+(\(see) 2229 6838 w
 10 /LucidaSans-Italic f
-(malloc) 2458 6958 w
+(malloc) 2458 6838 w
 10 /LucidaSansUnicode00 f
-(\(2\)\).) 2777 6958 w
-(Due) 3036 6958 w
-(to) 3262 6958 w
-(the) 3394 6958 w
-(type-checking,) 3583 6958 w
-(if) 4346 6958 w
+(\(2\)\).) 2777 6838 w
+(Due) 3036 6838 w
+(to) 3262 6838 w
+(the) 3394 6838 w
+(type-checking,) 3583 6838 w
+(if) 4346 6838 w
 10 /LucidaTypewriter f
-(a) 4446 6958 w
+(a) 4446 6838 w
 10 /LucidaSansUnicode00 f
-(,) 4518 6958 w
+(,) 4518 6838 w
 10 /LucidaTypewriter f
-(b) 4584 6958 w
+(b) 4584 6838 w
 10 /LucidaSansUnicode00 f
-(,) 4656 6958 w
-(and) 4722 6958 w
+(,) 4656 6838 w
+(and) 4722 6838 w
 10 /LucidaTypewriter f
-(c) 4936 6958 w
+(c) 4936 6838 w
 10 /LucidaSansUnicode00 f
-(,) 5008 6958 w
-(are) 720 7078 w
-(of) 910 7078 w
-(an) 1046 7078 w
-(incompatible) 1201 7078 w
-(type) 1867 7078 w
-(to) 2113 7078 w
+(,) 5008 6838 w
+(are) 720 6958 w
+(of) 910 6958 w
+(an) 1046 6958 w
+(incompatible) 1201 6958 w
+(type) 1867 6958 w
+(to) 2113 6958 w
 10 /LucidaTypewriter f
-(int) 2249 7078 w
+(int) 2249 6958 w
 10 /LucidaSansUnicode00 f
-(,) 2465 7078 w
+(,) 2465 6958 w
 10 /LucidaTypewriter f
-(double) 2535 7078 w
+(double) 2535 6958 w
 10 /LucidaSansUnicode00 f
-(,) 2967 7078 w
-(and) 3037 7078 w
+(,) 2967 6958 w
+(and) 3037 6958 w
 10 /LucidaTypewriter f
-(char*) 3255 7078 w
+(char*) 3255 6958 w
 10 /LucidaSansUnicode00 f
-(respectively,) 3653 7078 w
-(then) 4296 7078 w
-(the) 4550 7078 w
-(exam\255) 4742 7078 w
-(ple above will not compile.) 720 7198 w
+(respectively,) 3653 6958 w
+(then) 4296 6958 w
+(the) 4550 6958 w
+(exam\255) 4742 6958 w
+(ple above will not compile.) 720 7078 w
 cleartomark
 showpage
 saveobj restore
@@ -4068,283 +4072,360 @@ mark
 (2.2.) 720 840 w
 (Channel Declarations) 962 840 w
 10 /LucidaSansUnicode00 f
-(The) 720 996 w
-(extension) 956 996 w
-(reserves) 1486 996 w
-(the) 1945 996 w
-(character) 2155 996 w
+(The extension reserves the character) 720 996 w
 10 /LucidaTypewriter f
-(@) 2660 996 w
+(@) 2544 996 w
 10 /LucidaSansUnicode00 f
-(for) 2788 996 w
-(declarations) 2983 996 w
-(of) 3629 996 w
-(typed) 3783 996 w
-(Channels.) 4110 996 w
-(A) 4644 996 w
-(typed) 4769 996 w
-(channel) 720 1116 w
-(has) 1139 1116 w
-(a) 1349 1116 w
-(type) 1446 1116 w
-(associated) 1696 1116 w
-(with) 2247 1116 w
-(it;) 2494 1116 w
-(only) 2634 1116 w
-(values) 2879 1116 w
-(of) 3225 1116 w
-(that) 3364 1116 w
-(type) 3596 1116 w
-(may) 3845 1116 w
-(be) 4086 1116 w
-(sent) 4246 1116 w
-(or) 4493 1116 w
-(received) 4636 1116 w
-(from) 720 1236 w
-(the) 990 1236 w
-(channel.) 1183 1236 w
-(The) 1630 1236 w
+(for) 2648 996 w
+(declarations) 2820 996 w
+(of) 3443 996 w
+(typed) 3574 996 w
+(channels.) 3878 996 w
+(A) 4371 996 w
+(typed) 4473 996 w
+(chan\255) 4777 996 w
+(nel) 720 1116 w
+(has) 910 1116 w
+(a) 1120 1116 w
+(type) 1217 1116 w
+10 /LucidaSansUnicode20 f
+(\024) 1425 1116 w
+10 /LucidaSansUnicode00 f
+(referred) 1525 1116 w
+(to) 1958 1116 w
+(as) 2098 1116 w
+(the) 2246 1116 w
+(sending) 2443 1116 w
+(type) 2870 1116 w
+10 /LucidaSansUnicode20 f
+(\024) 3078 1116 w
+10 /LucidaSansUnicode00 f
+(associated) 3178 1116 w
+(with) 3729 1116 w
+(it;) 3976 1116 w
+(only) 4116 1116 w
+(values) 4362 1116 w
+(of) 4709 1116 w
+(that) 4849 1116 w
+(type) 720 1236 w
+(may) 964 1236 w
+(be) 1200 1236 w
+(sent) 1355 1236 w
+(or) 1597 1236 w
+(received) 1735 1236 w
+(from) 2176 1236 w
+(the) 2445 1236 w
+(channel.) 2637 1236 w
+(The) 3083 1236 w
 10 /LucidaTypewriter f
-(@) 1849 1236 w
+(@) 3301 1236 w
 10 /LucidaSansUnicode00 f
-(symbol) 1959 1236 w
-(has) 2346 1236 w
-(the) 2552 1236 w
-(same) 2745 1236 w
-(precedence) 3038 1236 w
-(as) 3631 1236 w
-(the) 3775 1236 w
-(pointer) 3968 1236 w
-(dereference) 4355 1236 w
+(symbol) 3410 1236 w
+(has) 3796 1236 w
+(the) 4001 1236 w
+(same) 4193 1236 w
+(precedence) 4485 1236 w
+(as the pointer dereference) 720 1356 w
 10 /LucidaTypewriter f
-(*) 4968 1236 w
+(*) 2033 1356 w
 10 /LucidaSansUnicode00 f
-(and functions similarly. Thus) 720 1356 w
+(and serves a similar purpose. Thus) 2137 1356 w
 10 /LucidaTypewriter f
 (int @c;) 1152 1536 w
 10 /LucidaSansUnicode00 f
-(declares c to be a channel for sending/receiving an int;) 720 1716 w
+(declares) 720 1716 w
+10 /LucidaTypewriter f
+(c) 1154 1716 w
+10 /LucidaSansUnicode00 f
+(to be a channel for sending/receiving an int;) 1258 1716 w
 10 /LucidaTypewriter f
 (char *@c;) 1152 1896 w
 10 /LucidaSansUnicode00 f
-(declares c to be a channel for sending/receiving a pointer to a char; and) 720 2076 w
+(declares) 720 2076 w
+10 /LucidaTypewriter f
+(c) 1154 2076 w
+10 /LucidaSansUnicode00 f
+(to be a channel for sending/receiving a pointer to a char; and) 1258 2076 w
 10 /LucidaTypewriter f
 (int *\(*@c[3]\)\(int\);) 1152 2256 w
 10 /LucidaSansUnicode00 f
 (declares) 720 2436 w
-(c) 1164 2436 w
-(to) 1257 2436 w
-(be) 1397 2436 w
-(an) 1558 2436 w
-(array) 1717 2436 w
-(of) 2003 2436 w
-(three) 2143 2436 w
-(channels) 2437 2436 w
-(for) 2907 2436 w
-(sending/receiving) 3088 2436 w
-(pointers) 4006 2436 w
-(to) 4448 2436 w
+10 /LucidaTypewriter f
+(c) 1162 2436 w
+10 /LucidaSansUnicode00 f
+(to) 1274 2436 w
+(be) 1412 2436 w
+(an) 1571 2436 w
+(array) 1728 2436 w
+(of) 2012 2436 w
+(three) 2150 2436 w
+(channels) 2442 2436 w
+(for) 2911 2436 w
+(sending/receiving) 3091 2436 w
+(pointers) 4008 2436 w
+(to) 4449 2436 w
 (functions) 4588 2436 w
 (that take an int and return a pointer to an int.) 720 2556 w
-(The) 720 2712 w
-10 /LucidaTypewriter f
-(@) 936 2712 w
-10 /LucidaSansUnicode00 f
-(symbol) 1043 2712 w
-(can) 1428 2712 w
-(be) 1632 2712 w
-(viewed) 1787 2712 w
-(as) 2156 2712 w
-(a) 2298 2712 w
-(special) 2389 2712 w
-(kind) 2759 2712 w
-(of) 3007 2712 w
-(dereference.) 3141 2712 w
-(It) 3816 2712 w
-(represents) 3918 2712 w
-(the) 4468 2712 w
-(value) 4659 2712 w
-(in) 4949 2712 w
-(the channel.) 720 2832 w
 10 /LucidaSans-Demi f
-(2.3.) 720 3072 w
-(Channel Allocation) 962 3072 w
+(2.3.) 720 2796 w
+(Channel Allocation) 962 2796 w
 10 /LucidaSansUnicode00 f
-(Once) 720 3228 w
-(a) 1020 3228 w
-(channel) 1128 3228 w
-(is) 1558 3228 w
-(declared,) 1691 3228 w
-(it) 2190 3228 w
-(must) 2309 3228 w
-(be) 2605 3228 w
-(configured) 2777 3228 w
-(for) 3354 3228 w
-(use) 3547 3228 w
-(by) 3770 3228 w
-(applying) 3939 3228 w
-(the) 4408 3228 w
-(compiler) 4617 3228 w
-(extension) 720 3348 w
+(Once) 720 2952 w
+(a) 1020 2952 w
+(channel) 1128 2952 w
+(is) 1558 2952 w
+(declared,) 1691 2952 w
+(it) 2190 2952 w
+(must) 2309 2952 w
+(be) 2605 2952 w
+(configured) 2777 2952 w
+(for) 3354 2952 w
+(use) 3547 2952 w
+(by) 3770 2952 w
+(applying) 3939 2952 w
+(the) 4408 2952 w
+(compiler) 4617 2952 w
+(extension) 720 3072 w
 10 /LucidaTypewriter f
-(chanset) 1227 3348 w
+(chanset) 1227 3072 w
 10 /LucidaSansUnicode00 f
-(to the channel. The usage is) 1763 3348 w
+(to it. The usage is) 1763 3072 w
 10 /LucidaTypewriter f
-(int @c;) 1152 3528 w
-(chanset\(c, nelem\);) 1152 3648 w
+(int @c;) 1152 3252 w
+(chanset\(c, nelem\);) 1152 3372 w
 10 /LucidaSansUnicode00 f
-(Where) 720 3828 w
+(Where) 720 3552 w
 10 /LucidaTypewriter f
-(nelem) 1053 3828 w
+(nelem) 1053 3552 w
 10 /LucidaSansUnicode00 f
-(is) 1446 3828 w
-(an) 1559 3828 w
-(int) 1709 3828 w
-(that) 1870 3828 w
-(sets) 2094 3828 w
-(the) 2322 3828 w
-(number) 2510 3828 w
-(of) 2920 3828 w
-(values) 3051 3828 w
-(the) 3389 3828 w
-(channel) 3577 3828 w
-(can) 3987 3828 w
-(hold) 4188 3828 w
-(and) 4436 3828 w
-(whether) 4649 3828 w
-(the channel is buffered or unbuffered.) 720 3948 w
-(See) 2644 3948 w
+(is) 1446 3552 w
+(an) 1559 3552 w
+(int) 1709 3552 w
+(that) 1870 3552 w
+(sets) 2094 3552 w
+(the) 2322 3552 w
+(number) 2510 3552 w
+(of) 2920 3552 w
+(values) 3051 3552 w
+(the) 3389 3552 w
+(channel) 3577 3552 w
+(can) 3987 3552 w
+(hold) 4188 3552 w
+(and) 4436 3552 w
+(whether) 4649 3552 w
+(the channel is buffered or unbuffered.) 720 3672 w
+(See) 2644 3672 w
 10 /LucidaTypewriter f
-(chancreate) 2842 3948 w
+(chancreate) 2842 3672 w
 10 /LucidaSansUnicode00 f
-(in) 3594 3948 w
+(in) 3594 3672 w
 10 /LucidaSans-Italic f
-(thread) 3717 3948 w
+(thread) 3717 3672 w
 10 /LucidaSansUnicode00 f
-(\(2\).) 4040 3948 w
+(\(2\).) 4040 3672 w
 10 /LucidaSans-Demi f
-(2.4.) 720 4188 w
-(Channel Operations) 962 4188 w
+(2.4.) 720 3912 w
+(Channel Operations) 962 3912 w
 10 /LucidaSansUnicode00 f
-(The) 720 4344 w
-(compiler) 941 4344 w
-(extensions) 1404 4344 w
-(allows) 1970 4344 w
-(for) 2312 4344 w
-(sending) 2491 4344 w
-(into) 2916 4344 w
-(and) 3146 4344 w
-(receiving) 3367 4344 w
-(typed) 3846 4344 w
-(values) 4158 4344 w
-(from) 4504 4344 w
-(chan\255) 4777 4344 w
-(nels.) 720 4464 w
-(The) 985 4464 w
-(syntax) 1201 4464 w
-(for) 1554 4464 w
-(receiving) 1728 4464 w
-(a) 2200 4464 w
-(channel) 2289 4464 w
-(mimics) 2700 4464 w
-(that) 3080 4464 w
-(of) 3305 4464 w
-(channel) 3437 4464 w
-(declarations.) 3848 4464 w
-(That) 4504 4464 w
-(is,) 4755 4464 w
-(for) 4901 4464 w
-(a channel for sending ints and an int as follows:) 720 4584 w
+(The) 720 4068 w
+(compiler) 945 4068 w
+(extension) 1412 4068 w
+(allows) 1931 4068 w
+(for) 2278 4068 w
+(sending) 2462 4068 w
+(into) 2892 4068 w
+(and) 3126 4068 w
+(receiving) 3351 4068 w
+(typed) 3834 4068 w
+(values) 4150 4068 w
+(from) 4500 4068 w
+(chan\255) 4777 4068 w
+(nels.) 720 4188 w
+(The) 985 4188 w
+(syntax) 1201 4188 w
+(for) 1554 4188 w
+(receiving) 1728 4188 w
+(a) 2200 4188 w
+(channel) 2289 4188 w
+(mimics) 2700 4188 w
+(that) 3080 4188 w
+(of) 3305 4188 w
+(channel) 3437 4188 w
+(declarations.) 3848 4188 w
+(That) 4504 4188 w
+(is,) 4755 4188 w
+(for) 4901 4188 w
+(a channel for sending ints and an int as follows:) 720 4308 w
 10 /LucidaTypewriter f
-(int @c, i;) 1152 4764 w
+(int @c, i;) 1152 4488 w
 10 /LucidaSansUnicode00 f
-(the statement) 720 4944 w
+(the statement) 720 4668 w
 10 /LucidaTypewriter f
-(i = @c;) 1152 5124 w
+(i = @c;) 1152 4848 w
 10 /LucidaSansUnicode00 f
-(receives an int from the channel) 720 5304 w
+(receives) 720 5028 w
+(an) 1158 5028 w
+(int) 1321 5028 w
+(from) 1495 5028 w
+(the) 1773 5028 w
+(channel) 1974 5028 w
 10 /LucidaTypewriter f
-(c) 2313 5304 w
+(c) 2397 5028 w
 10 /LucidaSansUnicode00 f
-(and assigns the value to) 2417 5304 w
+(and) 2515 5028 w
+(assigns) 2741 5028 w
+(the) 3148 5028 w
+(value) 3349 5028 w
+(to) 3649 5028 w
 10 /LucidaTypewriter f
-(i.) 3625 5304 w
+(i.) 3793 5028 w
 10 /LucidaSansUnicode00 f
-(This can be thought of as) 3801 5304 w
-(a) 720 5424 w
-(kind) 812 5424 w
-(of) 1061 5424 w
-(dereference) 1196 5424 w
-(that) 1808 5424 w
-(first) 2036 5424 w
-(calls) 2268 5424 w
-(into) 2520 5424 w
-(the) 2746 5424 w
+(More) 3983 5028 w
+(specifically,) 4274 5028 w
+(the) 4885 5028 w
+(expression) 720 5148 w
+10 /LucidaTypewriter f
+(@c) 1308 5148 w
+10 /LucidaSansUnicode00 f
+(evaluates) 1509 5148 w
+(to) 2019 5148 w
+(the) 2174 5148 w
+(value) 2386 5148 w
+(retrieved) 2697 5148 w
+(from) 3185 5148 w
+(the) 3473 5148 w
+(channel) 3684 5148 w
+(via) 4117 5148 w
+(a) 4309 5148 w
+(call) 4420 5148 w
+(into) 4640 5148 w
+(the) 4885 5148 w
 10 /LucidaSans-Italic f
-(thread) 2938 5424 w
+(thread) 720 5268 w
 10 /LucidaSansUnicode00 f
-(\(2\)) 3261 5424 w
-(library) 3427 5424 w
-(in) 3774 5424 w
-(order) 3902 5424 w
-(to) 4200 5424 w
-(have) 4334 5424 w
-(the) 4595 5424 w
-(value) 4786 5424 w
-(available in the channel.) 720 5544 w
-(A) 720 5700 w
-(new) 837 5700 w
-(binary) 1080 5700 w
-(operator) 1430 5700 w
+(\(2\) library.) 1043 5268 w
+(A) 720 5424 w
+(new) 837 5424 w
+(binary) 1080 5424 w
+(operator) 1430 5424 w
 10 /LucidaTypewriter f
-(@=) 1893 5700 w
+(@=) 1893 5424 w
 10 /LucidaSansUnicode00 f
-(is) 2085 5700 w
-(used) 2213 5700 w
-(to) 2493 5700 w
-(send) 2639 5700 w
-(into) 2920 5700 w
-(a) 3158 5700 w
-(channel.) 3262 5700 w
-(The) 3752 5700 w
-(left-hand) 3982 5700 w
-(side) 4490 5700 w
-(of) 4738 5700 w
-(the) 4885 5700 w
-(expression) 720 5820 w
-(must) 1284 5820 w
-(be a channel and the right-hand side) 1560 5820 w
+(is) 2085 5424 w
+(used) 2213 5424 w
+(to) 2493 5424 w
+(send) 2639 5424 w
+(into) 2920 5424 w
+(a) 3158 5424 w
+(channel.) 3262 5424 w
+(The) 3752 5424 w
+(left-hand) 3982 5424 w
+(side) 4490 5424 w
+(of) 4738 5424 w
+(the) 4885 5424 w
+(expression) 720 5544 w
+(must) 1284 5544 w
+(be a channel and the right-hand side) 1560 5544 w
 10 /LucidaSansUnicode20 f
-(\031) 3368 5820 w
+(\031) 3368 5544 w
 10 /LucidaSansUnicode00 f
-(s type must match the type of the) 3400 5820 w
-(values the channel is allowed to send/receive.) 720 5940 w
-(Thus given) 3019 5940 w
+(s type must match the type of the) 3400 5544 w
+(sending value of the channel. Thus given) 720 5664 w
 10 /LucidaTypewriter f
-(char *@c;) 1152 6120 w
+(char *@c;) 1152 5844 w
 10 /LucidaSansUnicode00 f
-(the statement) 720 6300 w
+(the statement) 720 6024 w
 10 /LucidaTypewriter f
-(c @= "hello, world";) 1152 6480 w
+(c @= "hello, world";) 1152 6204 w
 10 /LucidaSansUnicode00 f
-(completes) 720 6660 w
-(a) 1256 6660 w
-(send) 1350 6660 w
-(into) 1621 6660 w
-(the) 1849 6660 w
-(channel.) 2043 6660 w
-(The) 2491 6660 w
-(statement) 2711 6660 w
-(always) 3234 6660 w
-(evaluates) 3592 6660 w
-(to) 4084 6660 w
-(an) 4221 6660 w
-(int:) 4377 6660 w
-(1) 4577 6660 w
-(on) 4680 6660 w
-(suc\255) 4843 6660 w
-(ces and -1 if the send was interrupted.) 720 6780 w
+(sends) 720 6384 w
+(the) 1038 6384 w
+(string) 1228 6384 w
+(into) 1545 6384 w
+(the) 1769 6384 w
+(channel.) 1959 6384 w
+(The) 2403 6384 w
+(expression) 2619 6384 w
+10 /LucidaTypewriter f
+(c) 3226 6384 w
+(@=) 3374 6384 w
+(val) 3594 6384 w
+10 /LucidaSansUnicode00 f
+(evaluates) 3846 6384 w
+(to) 4335 6384 w
+(an) 4469 6384 w
+(int:) 4622 6384 w
+(1) 4818 6384 w
+(on) 4917 6384 w
+(success and -1 if the send was interrupted.) 720 6504 w
+10 /LucidaSans-Demi f
+(2.5.) 720 6744 w
+(Sending/Receiving of Multiple Channels) 962 6744 w
+10 /LucidaSansUnicode00 f
+(Channel) 720 6900 w
+(sending/receiving) 1154 6900 w
+(may) 2069 6900 w
+(be) 2309 6900 w
+(multiplexed) 2468 6900 w
+(on) 3086 6900 w
+(a) 3249 6900 w
+(single) 3344 6900 w
+(statement) 3673 6900 w
+(using) 4197 6900 w
+(a) 4503 6900 w
+(new) 4598 6900 w
+(con\255) 4833 6900 w
+(trol) 720 7020 w
+(flow) 937 7020 w
+(statement) 1190 7020 w
+(called) 1723 7020 w
+(the) 2055 7020 w
+(alt-switch.) 2259 7020 w
+(It) 2826 7020 w
+(is) 2941 7020 w
+(similar) 3070 7020 w
+(to) 3446 7020 w
+(a) 3593 7020 w
+(switch) 3697 7020 w
+(with) 4053 7020 w
+(the) 4306 7020 w
+(expression) 4509 7020 w
+(value) 720 7140 w
+(replaced) 1014 7140 w
+(by) 1468 7140 w
+(an) 1623 7140 w
+10 /LucidaTypewriter f
+(@) 1780 7140 w
+10 /LucidaSansUnicode00 f
+(character) 1892 7140 w
+(and) 2381 7140 w
+(the) 2601 7140 w
+10 /LucidaTypewriter f
+(case) 2796 7140 w
+10 /LucidaSansUnicode00 f
+(keywords) 3124 7140 w
+(replaced) 3623 7140 w
+(by) 4077 7140 w
+(a) 4233 7140 w
+(new) 4329 7140 w
+(extension) 4565 7140 w
+(keyword) 720 7260 w
+10 /LucidaTypewriter f
+(alt) 1195 7260 w
+10 /LucidaSansUnicode00 f
+(.) 1411 7260 w
+(Instead) 1542 7260 w
+(of) 1962 7260 w
+(constant) 2127 7260 w
+(expressions,) 2610 7260 w
+(each) 3291 7260 w
+10 /LucidaTypewriter f
+(alt) 3582 7260 w
+10 /LucidaSansUnicode00 f
+(is) 3865 7260 w
+(labeled) 4012 7260 w
+(by) 4430 7260 w
+(potential) 4611 7260 w
 cleartomark
 showpage
 saveobj restore
@@ -4355,319 +4436,265 @@ mark
 3 pagesetup
 10 /LucidaSansUnicode00 f
 (\255 3 \255) 2783 480 w
-10 /LucidaSans-Demi f
-(2.5.) 720 840 w
-(Sending/Receiving of Multiple Channels) 962 840 w
-10 /LucidaSansUnicode00 f
-(Channel) 720 996 w
-(sending/receiving) 1154 996 w
-(may) 2069 996 w
-(be) 2309 996 w
-(multiplexed) 2468 996 w
-(on) 3086 996 w
-(a) 3249 996 w
-(single) 3344 996 w
-(statement) 3673 996 w
-(using) 4197 996 w
-(a) 4503 996 w
-(new) 4598 996 w
-(con\255) 4833 996 w
-(trol) 720 1116 w
-(flow) 937 1116 w
-(statement) 1190 1116 w
-(called) 1723 1116 w
-(the) 2055 1116 w
-(alt-switch.) 2259 1116 w
-(It) 2826 1116 w
-(is) 2941 1116 w
-(similar) 3070 1116 w
-(to) 3446 1116 w
-(a) 3593 1116 w
-(switch) 3697 1116 w
-(with) 4053 1116 w
-(the) 4306 1116 w
-(expression) 4509 1116 w
-(value) 720 1236 w
-(replaced) 1014 1236 w
-(by) 1468 1236 w
-(an) 1623 1236 w
+(channel) 720 840 w
+(sends) 1131 840 w
+(or) 1448 840 w
+(receives.) 1584 840 w
+(An) 2042 840 w
+(optional) 2207 840 w
+(default) 2638 840 w
+(label) 3011 840 w
+(handles) 3277 840 w
+(the) 3689 840 w
+(case) 3878 840 w
+(where) 4125 840 w
+(the) 4452 840 w
+(underly\255) 4642 840 w
+(ing) 720 960 w
 10 /LucidaTypewriter f
-(@) 1780 1236 w
+(doalt) 905 960 w
 10 /LucidaSansUnicode00 f
-(character) 1892 1236 w
-(and) 2381 1236 w
-(the) 2601 1236 w
-10 /LucidaTypewriter f
-(case) 2796 1236 w
-10 /LucidaSansUnicode00 f
-(keywords) 3124 1236 w
-(replaced) 3623 1236 w
-(by) 4077 1236 w
-(a) 4233 1236 w
-(new) 4329 1236 w
-(extension) 4565 1236 w
-(keyword) 720 1356 w
-10 /LucidaTypewriter f
-(alt) 1168 1356 w
-10 /LucidaSansUnicode00 f
-(.) 1384 1356 w
-(Instead) 1488 1356 w
-(of) 1881 1356 w
-(constant) 2019 1356 w
-(expressions,) 2475 1356 w
-(each) 3128 1356 w
-10 /LucidaTypewriter f
-(alt) 3391 1356 w
-10 /LucidaSansUnicode00 f
-(is) 3646 1356 w
-(labeled) 3765 1356 w
-(by) 4155 1356 w
-(potential) 4309 1356 w
-(chan\255) 4777 1356 w
-(nel) 720 1476 w
-(sends) 909 1476 w
-(or) 1234 1476 w
-(receives.) 1378 1476 w
-(An) 1844 1476 w
-(optional) 2017 1476 w
-(default) 2457 1476 w
-(label) 2839 1476 w
-(handles) 3114 1476 w
-(the) 3535 1476 w
-(case) 3733 1476 w
-(where) 3989 1476 w
-(the) 4324 1476 w
-(underlying) 4522 1476 w
-10 /LucidaTypewriter f
-(doalt) 720 1596 w
-10 /LucidaSansUnicode00 f
-(operation \(see) 1112 1596 w
+(operation \(see) 1297 960 w
 10 /LucidaSans-Italic f
-(thread) 1837 1596 w
+(thread) 2022 960 w
 10 /LucidaSansUnicode00 f
-(\(2\)\) is interrupted.) 2160 1596 w
+(\(2\)\) is interrupted.) 2345 960 w
 10 /LucidaTypewriter f
-(int @ichan, @req, i;) 1152 1776 w
-(char *@schan, *s;) 1152 1896 w
-(s = "hello";) 1152 2136 w
-(switch @{) 1152 2256 w
-(alt i = @ichan:) 1152 2376 w
-(print\("%d\\n", i\);) 1512 2496 w
-(...) 1512 2616 w
-(break;) 1512 2736 w
-(alt @req:) 1152 2856 w
-(...) 1512 2976 w
-(break;) 1512 3096 w
-(alt schan @= s:) 1152 3216 w
-(print\("Sent hello\\n"\);) 1512 3336 w
-(...) 1512 3456 w
-(break;) 1512 3576 w
-(default:) 1152 3696 w
-(print\("Interrupted!\\n"\);) 1512 3816 w
-(}) 1152 3936 w
+(int @ichan, @req, i;) 1152 1140 w
+(char *@schan, *s;) 1152 1260 w
+(s = "hello";) 1152 1500 w
+(switch @{) 1152 1620 w
+(alt i = @ichan:) 1152 1740 w
+(print\("%d\\n", i\);) 1512 1860 w
+(...) 1512 1980 w
+(break;) 1512 2100 w
+(alt @req:) 1152 2220 w
+(...) 1512 2340 w
+(break;) 1512 2460 w
+(alt schan @= s:) 1152 2580 w
+(print\("Sent hello\\n"\);) 1512 2700 w
+(...) 1512 2820 w
+(break;) 1512 2940 w
+(default:) 1152 3060 w
+(print\("Interrupted!\\n"\);) 1512 3180 w
+(}) 1152 3300 w
 10 /LucidaSansUnicode00 f
-(In) 720 4152 w
-(the) 853 4152 w
-(example) 1051 4152 w
-(above) 1507 4152 w
-(three) 1837 4152 w
-(potential) 2132 4152 w
-(channel) 2604 4152 w
-(operations) 3024 4152 w
-(are) 3583 4152 w
-("multiplexed") 3778 4152 w
-(on) 4473 4152 w
-(one) 4639 4152 w
-(alt-) 4861 4152 w
-(switch) 720 4272 w
-(statement.) 1073 4272 w
-(Either) 1635 4272 w
-(an) 1960 4272 w
-(int) 2123 4272 w
-(is) 2297 4272 w
-(received) 2423 4272 w
-(from) 2873 4272 w
+(In) 720 3516 w
+(the) 860 3516 w
+(example) 1064 3516 w
+(above) 1526 3516 w
+(three) 1862 3516 w
+(potential) 2163 3516 w
+(channel) 2641 3516 w
+(operations) 3067 3516 w
+(are) 3632 3516 w
+(multiplexed) 3833 3516 w
+(on) 4460 3516 w
+(one) 4632 3516 w
+(alt-) 4861 3516 w
+(switch) 720 3636 w
+(statement.) 1073 3636 w
+(Either) 1635 3636 w
+(an) 1960 3636 w
+(int) 2123 3636 w
+(is) 2297 3636 w
+(received) 2423 3636 w
+(from) 2873 3636 w
 10 /LucidaTypewriter f
-(@ichan) 3151 4272 w
+(@ichan) 3151 3636 w
 10 /LucidaSansUnicode00 f
-(and) 3629 4272 w
-(assigned) 3855 4272 w
-(to) 4330 4272 w
+(and) 3629 3636 w
+(assigned) 3855 3636 w
+(to) 4330 3636 w
 10 /LucidaTypewriter f
-(i) 4474 4272 w
+(i) 4474 3636 w
 10 /LucidaSansUnicode00 f
-(,) 4546 4272 w
-(an) 4624 4272 w
-(int) 4787 4272 w
-(is) 4960 4272 w
-(received) 720 4392 w
-(from) 1172 4392 w
+(,) 4546 3636 w
+(an) 4624 3636 w
+(int) 4787 3636 w
+(is) 4960 3636 w
+(received) 720 3756 w
+(from) 1185 3756 w
 10 /LucidaTypewriter f
-(@req) 1452 4392 w
+(@req) 1478 3756 w
 10 /LucidaSansUnicode00 f
-(and) 1788 4392 w
-(its) 2016 4392 w
-(value) 2181 4392 w
-(thrown) 2483 4392 w
-(away,) 2871 4392 w
-(or) 3190 4392 w
-(the) 3340 4392 w
-(string) 3543 4392 w
+(and) 1827 3756 w
+(its) 2068 3756 w
+(value) 2246 3756 w
+(thrown) 2561 3756 w
+(away,) 2962 3756 w
+(or) 3294 3756 w
+(the) 3458 3756 w
+(string) 3675 3756 w
 10 /LucidaTypewriter f
-("hello") 3914 4392 w
+(hello) 4019 3756 w
 10 /LucidaSansUnicode00 f
-(is) 4467 4392 w
-(sent) 4596 4392 w
-(into) 4851 4392 w
+(is) 4441 3756 w
+(sent) 4583 3756 w
+(into) 4851 3756 w
 10 /LucidaTypewriter f
-(schan) 720 4512 w
+(schan) 720 3876 w
 10 /LucidaSansUnicode00 f
-(.) 1080 4512 w
-(The) 1203 4512 w
-(operations) 1443 4512 w
-(are) 2018 4512 w
-(multiplexed) 2229 4512 w
-(in) 2866 4512 w
-(the) 3016 4512 w
-(sense) 3230 4512 w
-(that) 3565 4512 w
-(if) 3815 4512 w
-(at) 3940 4512 w
-(least) 4091 4512 w
-(one) 4378 4512 w
-(of) 4616 4512 w
-(those) 4773 4512 w
-(channel) 720 4632 w
-(operations) 1142 4632 w
-(can) 1703 4632 w
-(proceed,) 1916 4632 w
-(one) 2384 4632 w
-(is) 2608 4632 w
-(chosen) 2733 4632 w
-(at) 3121 4632 w
-(random) 3258 4632 w
-(to) 3678 4632 w
-(be) 3821 4632 w
-(executed) 3985 4632 w
-(and) 4472 4632 w
-(control) 4698 4632 w
-(flow) 720 4752 w
-(proceeds) 974 4752 w
-(after) 1466 4752 w
-(the) 1742 4752 w
-(corresponding) 1947 4752 w
+(.) 1080 3876 w
+(The) 1182 3876 w
+(operations) 1401 3876 w
+(are) 1955 3876 w
+(multiplexed) 2145 3876 w
+(in) 2761 3876 w
+(the) 2890 3876 w
+(sense) 3083 3876 w
+(that) 3397 3876 w
+(if) 3625 3876 w
+(at) 3728 3876 w
+(least) 3857 3876 w
+(one) 4122 3876 w
+(of) 4338 3876 w
+(those) 4473 3876 w
+(chan\255) 4777 3876 w
+(nel) 720 3996 w
+(operations) 910 3996 w
+(can) 1469 3996 w
+(proceed,) 1680 3996 w
+(one) 2146 3996 w
+(is) 2369 3996 w
+(chosen) 2493 3996 w
+(at) 2880 3996 w
+(random) 3016 3996 w
+(to) 3435 3996 w
+(be) 3577 3996 w
+(executed) 3740 3996 w
+(and) 4226 3996 w
+(control) 4450 3996 w
+(flow) 4836 3996 w
+(proceeds) 720 4116 w
+(after) 1201 4116 w
+(the) 1466 4116 w
+(corresponding) 1660 4116 w
 10 /LucidaTypewriter f
-(alt) 2700 4752 w
+(alt) 2402 4116 w
 10 /LucidaSansUnicode00 f
-(label.) 2966 4752 w
-(Otherwise) 3280 4752 w
-(the) 3817 4752 w
-(alt-switch) 4021 4752 w
-(statement) 4556 4752 w
-(blocks until one of the operations can proceed.) 720 4872 w
-(A non-blocking alt-switch statement is specified by using two) 720 5028 w
+(label.) 2657 4116 w
+(Otherwise) 2960 4116 w
+(the) 3486 4116 w
+(alt-switch) 3680 4116 w
+(statement) 4205 4116 w
+(blocks) 4727 4116 w
+(until one of the operations can proceed.) 720 4236 w
+(A non-blocking alt-switch statement is specified by using two) 720 4392 w
 10 /LucidaTypewriter f
-(@) 3776 5028 w
+(@) 3776 4392 w
 10 /LucidaSansUnicode00 f
-(symbols:) 3880 5028 w
+(symbols:) 3880 4392 w
 10 /LucidaTypewriter f
-(switch @@{) 1152 5208 w
-(...) 1512 5328 w
-(default:) 1152 5448 w
-(print\("No channel operations can proceed.\\n"\);) 1512 5568 w
-(}) 1152 5688 w
+(switch @@{) 1152 4572 w
+(...) 1512 4692 w
+(default:) 1152 4812 w
+(print\("No channel operations can proceed.\\n"\);) 1512 4932 w
+(}) 1152 5052 w
 10 /LucidaSansUnicode00 f
-(In) 720 5904 w
-(this) 859 5904 w
-(case,) 1086 5904 w
-(the) 1379 5904 w
-(statement) 1582 5904 w
-(does) 2114 5904 w
-(not) 2393 5904 w
-(block) 2601 5904 w
-(if) 2911 5904 w
-(no) 3026 5904 w
-(channel) 3198 5904 w
-(operations) 3624 5904 w
-(can) 4189 5904 w
-(proceed,) 4406 5904 w
-(but) 4878 5904 w
-(immediately) 720 6024 w
-(continues) 1366 6024 w
-(execution) 1891 6024 w
-(at) 2420 6024 w
-(the) 2566 6024 w
-(default) 2774 6024 w
-(label.) 3166 6024 w
-(If) 3483 6024 w
-(a) 3602 6024 w
-(non-blocking) 3710 6024 w
-(alt-switch) 4421 6024 w
-(is) 4960 6024 w
-(interrupted) 720 6144 w
-(while) 1317 6144 w
-(in) 1620 6144 w
-(the) 1761 6144 w
-(middle) 1966 6144 w
-(of) 2350 6144 w
-(executing) 2499 6144 w
-(a) 3026 6144 w
-(valid) 3132 6144 w
-(channel) 3411 6144 w
-(operation,) 3839 6144 w
-(then) 4387 6144 w
-(the) 4655 6144 w
-(alt-) 4861 6144 w
-(switch will continue execution at a) 720 6264 w
+(In) 720 5268 w
+(this) 859 5268 w
+(case,) 1086 5268 w
+(the) 1379 5268 w
+(statement) 1582 5268 w
+(does) 2114 5268 w
+(not) 2393 5268 w
+(block) 2601 5268 w
+(if) 2911 5268 w
+(no) 3026 5268 w
+(channel) 3198 5268 w
+(operations) 3624 5268 w
+(can) 4189 5268 w
+(proceed,) 4406 5268 w
+(but) 4878 5268 w
+(immediately) 720 5388 w
+(continues) 1366 5388 w
+(execution) 1891 5388 w
+(at) 2420 5388 w
+(the) 2566 5388 w
+(default) 2774 5388 w
+(label.) 3166 5388 w
+(If) 3483 5388 w
+(a) 3602 5388 w
+(non-blocking) 3710 5388 w
+(alt-switch) 4421 5388 w
+(is) 4960 5388 w
+(interrupted) 720 5508 w
+(while) 1317 5508 w
+(in) 1620 5508 w
+(the) 1761 5508 w
+(middle) 1966 5508 w
+(of) 2350 5508 w
+(executing) 2499 5508 w
+(a) 3026 5508 w
+(valid) 3132 5508 w
+(channel) 3411 5508 w
+(operation,) 3839 5508 w
+(then) 4387 5508 w
+(the) 4655 5508 w
+(alt-) 4861 5508 w
+(switch will continue execution at a) 720 5628 w
 10 /LucidaTypewriter f
-(case) 2425 6264 w
+(case) 2425 5628 w
 10 /LucidaSansUnicode00 f
-(labeled by) 2745 6264 w
+(labeled by) 2745 5628 w
 10 /LucidaTypewriter f
-(-1) 3275 6264 w
+(-1) 3275 5628 w
 10 /LucidaSansUnicode00 f
-(.) 3419 6264 w
-(The) 720 6420 w
-(channel) 936 6420 w
-(send) 1348 6420 w
-(operation) 1616 6420 w
-(in) 2117 6420 w
-(an) 2244 6420 w
+(.) 3419 5628 w
+(The) 720 5784 w
+(channel) 936 5784 w
+(send) 1348 5784 w
+(operation) 1616 5784 w
+(in) 2117 5784 w
+(an) 2244 5784 w
 10 /LucidaTypewriter f
-(alt) 2397 6420 w
+(alt) 2397 5784 w
 10 /LucidaSansUnicode00 f
-(label) 2649 6420 w
-(is) 2917 6420 w
-(more) 3033 6420 w
-(restricted) 3320 6420 w
-(than) 3818 6420 w
-(an) 4070 6420 w
-(ordinary) 4223 6420 w
-(channel) 4663 6420 w
-(send) 720 6540 w
-(in) 994 6540 w
-(the) 1127 6540 w
-(sense) 1324 6540 w
-(that) 1641 6540 w
-(the) 1873 6540 w
-(right) 2069 6540 w
-(hand) 2341 6540 w
-(side) 2624 6540 w
-(of) 2864 6540 w
-(the) 3003 6540 w
+(label) 2649 5784 w
+(is) 2917 5784 w
+(more) 3033 5784 w
+(restricted) 3320 5784 w
+(than) 3818 5784 w
+(an) 4070 5784 w
+(ordinary) 4223 5784 w
+(channel) 4663 5784 w
+(send) 720 5904 w
+(in) 994 5904 w
+(the) 1127 5904 w
+(sense) 1324 5904 w
+(that) 1641 5904 w
+(the) 1873 5904 w
+(right) 2069 5904 w
+(hand) 2341 5904 w
+(side) 2624 5904 w
+(of) 2864 5904 w
+(the) 3003 5904 w
 10 /LucidaTypewriter f
-(@=) 3199 6540 w
+(@=) 3199 5904 w
 10 /LucidaSansUnicode00 f
-(binary) 3384 6540 w
-(operator) 3727 6540 w
-(must) 4183 6540 w
-(be) 4467 6540 w
-(address\255) 4627 6540 w
-(able. Thus) 720 6660 w
+(binary) 3384 5904 w
+(operator) 3727 5904 w
+(must) 4183 5904 w
+(be) 4467 5904 w
+(address\255) 4627 5904 w
+(able. Thus) 720 6024 w
 10 /LucidaTypewriter f
-(alt ichan @= 5:) 1152 6840 w
+(alt ichan @= 5:) 1152 6204 w
 10 /LucidaSansUnicode00 f
-(will not compile.) 720 7020 w
+(will not compile.) 720 6384 w
+10 /LucidaSans-Demi f
+(3.) 720 6624 w
+(Summary of the Extension) 873 6624 w
+10 /LucidaSansUnicode00 f
+(In total the extension reserves the following new keywords or symbols) 720 6780 w
+10 /LucidaTypewriter f
+(@ alt) 1644 6960 w
+(chanset) 2154 6960 w
+(cothread) 2808 6960 w
+(coproc) 3534 6960 w
+10 /LucidaSansUnicode00 f
+(and defines the following new expressions:) 720 7140 w
 cleartomark
 showpage
 saveobj restore
@@ -4678,251 +4705,718 @@ mark
 4 pagesetup
 10 /LucidaSansUnicode00 f
 (\255 4 \255) 2783 480 w
+10 /S f
+(_) 919 740 w
+(______________________________________________________________________________) 940 740 w
 10 /LucidaSans-Demi f
-(3.) 720 840 w
-(Summary of the Extension) 873 840 w
-10 /LucidaSansUnicode00 f
-(In total the extension reserves the following new keywords or symbols) 720 996 w
-10 /LucidaTypewriter f
-(@ alt) 1644 1176 w
-(chanset) 2154 1176 w
-(cothread) 2808 1176 w
-(coproc) 3534 1176 w
-10 /LucidaSansUnicode00 f
-(and defines the following new expressions or statements:) 720 1356 w
+(Usage Summary) 2466 884 w
 10 /S f
-(_) 919 1436 w
-(______________________________________________________________________________) 940 1436 w
+(_) 919 918 w
+(______________________________________________________________________________) 940 918 w
+(_) 919 938 w
+(______________________________________________________________________________) 940 938 w
 10 /LucidaSans-Demi f
-(Usage Summary) 2466 1580 w
+(Channel Operations) 2367 1072 w
 10 /S f
-(_) 919 1614 w
-(______________________________________________________________________________) 940 1614 w
-(_) 919 1634 w
-(______________________________________________________________________________) 940 1634 w
+(_) 919 1116 w
+(______________________________________________________________________________) 940 1116 w
+10 /LucidaTypewriter f
+(chanset\(chan, nelem\)) 1185 1260 w
+10 /LucidaSansUnicode00 f
+(Allocates and readies a channel) 2991 1260 w
+10 /S f
+(_) 919 1304 w
+(______________________________________________________________________________) 940 1304 w
+10 /LucidaTypewriter f
+(chan @= val) 1509 1448 w
+10 /LucidaSansUnicode00 f
+(Channel Send) 2991 1448 w
+10 /S f
+(_) 919 1492 w
+(______________________________________________________________________________) 940 1492 w
+10 /LucidaTypewriter f
+(@chan) 1725 1636 w
+10 /S f
+(\347) 2916 1656 w
+(\347) 2916 1616 w
+(\347) 2916 1516 w
+(\347) 2916 1416 w
+(\347) 2916 1316 w
+(\347) 2916 1216 w
+10 /LucidaSansUnicode00 f
+(Channel dereference \(receive\)) 2991 1636 w
+10 /S f
+(_) 919 1680 w
+(______________________________________________________________________________) 940 1680 w
 10 /LucidaSans-Demi f
-(Channel Operations) 2367 1768 w
+(Alt-Switch) 2605 1824 w
 10 /S f
-(_) 919 1812 w
-(______________________________________________________________________________) 940 1812 w
+(_) 919 1868 w
+(______________________________________________________________________________) 940 1868 w
 10 /LucidaTypewriter f
-(chanset\(chan, nelem\)) 1185 1956 w
+(switch @{...}) 1437 2012 w
 10 /LucidaSansUnicode00 f
-(Allocates and readies a channel) 2991 1956 w
+(Blocking alt-switch) 2991 2012 w
 10 /S f
-(_) 919 2000 w
-(______________________________________________________________________________) 940 2000 w
+(_) 919 2056 w
+(______________________________________________________________________________) 940 2056 w
 10 /LucidaTypewriter f
-(chan @= val) 1509 2144 w
+(switch @@{...}) 1401 2200 w
 10 /LucidaSansUnicode00 f
-(Channel Send) 2991 2144 w
+(Non-blocking alt-switch) 2991 2200 w
 10 /S f
-(_) 919 2188 w
-(______________________________________________________________________________) 940 2188 w
+(_) 919 2244 w
+(______________________________________________________________________________) 940 2244 w
 10 /LucidaTypewriter f
-(@chan) 1725 2332 w
-10 /S f
-(\347) 2916 2352 w
-(\347) 2916 2312 w
-(\347) 2916 2212 w
-(\347) 2916 2112 w
-(\347) 2916 2012 w
-(\347) 2916 1912 w
+(alt val = @chan:) 1329 2388 w
 10 /LucidaSansUnicode00 f
-(Channel dereference \(receive\)) 2991 2332 w
+(Alt label \(receive\)) 2991 2388 w
 10 /S f
-(_) 919 2376 w
-(______________________________________________________________________________) 940 2376 w
+(_) 919 2432 w
+(______________________________________________________________________________) 940 2432 w
+10 /LucidaTypewriter f
+(alt @chan:) 1545 2576 w
+10 /LucidaSansUnicode00 f
+(Alt label \(receive, value thrown away\)) 2991 2576 w
+10 /S f
+(_) 919 2620 w
+(______________________________________________________________________________) 940 2620 w
+10 /LucidaTypewriter f
+(alt chan @= val:) 1329 2764 w
+10 /S f
+(\347) 2916 2784 w
+(\347) 2916 2768 w
+(\347) 2916 2668 w
+(\347) 2916 2568 w
+(\347) 2916 2468 w
+(\347) 2916 2368 w
+(\347) 2916 2268 w
+(\347) 2916 2168 w
+(\347) 2916 2068 w
+(\347) 2916 1968 w
+10 /LucidaSansUnicode00 f
+(Alt label \(send\)) 2991 2764 w
+10 /S f
+(_) 919 2808 w
+(______________________________________________________________________________) 940 2808 w
 10 /LucidaSans-Demi f
-(Alt-Switch) 2605 2520 w
+(Thread Creation) 2462 2952 w
 10 /S f
-(_) 919 2564 w
-(______________________________________________________________________________) 940 2564 w
+(_) 919 2996 w
+(______________________________________________________________________________) 940 2996 w
 10 /LucidaTypewriter f
-(switch @{...}) 1437 2708 w
+(coproc\(fn\(...\), stksize\)) 1041 3140 w
 10 /LucidaSansUnicode00 f
-(Blocking alt-switch) 2991 2708 w
+(Starts a process in its own stack) 2991 3140 w
 10 /S f
-(_) 919 2752 w
-(______________________________________________________________________________) 940 2752 w
+(_) 919 3184 w
+(______________________________________________________________________________) 940 3184 w
 10 /LucidaTypewriter f
-(switch @@{...}) 1401 2896 w
+(cothread\(fn\(...\), stksize\)) 969 3328 w
 10 /LucidaSansUnicode00 f
-(Non-blocking alt-switch) 2991 2896 w
+(Starts a thread in its own stack) 2991 3328 w
 10 /S f
-(_) 919 2940 w
-(______________________________________________________________________________) 940 2940 w
-10 /LucidaTypewriter f
-(alt val = @chan:) 1329 3084 w
-10 /LucidaSansUnicode00 f
-(Alt label \(receive\)) 2991 3084 w
-10 /S f
-(_) 919 3128 w
-(______________________________________________________________________________) 940 3128 w
-10 /LucidaTypewriter f
-(alt @chan:) 1545 3272 w
-10 /LucidaSansUnicode00 f
-(Alt label \(receive, value thrown away\)) 2991 3272 w
-10 /S f
-(_) 919 3316 w
-(______________________________________________________________________________) 940 3316 w
-10 /LucidaTypewriter f
-(alt chan @= val:) 1329 3460 w
-10 /S f
-(\347) 2916 3480 w
-(\347) 2916 3464 w
-(\347) 2916 3364 w
-(\347) 2916 3264 w
-(\347) 2916 3164 w
-(\347) 2916 3064 w
-(\347) 2916 2964 w
-(\347) 2916 2864 w
-(\347) 2916 2764 w
-(\347) 2916 2664 w
-10 /LucidaSansUnicode00 f
-(Alt label \(send\)) 2991 3460 w
-10 /S f
-(_) 919 3504 w
-(______________________________________________________________________________) 940 3504 w
-10 /LucidaSans-Demi f
-(Thread Creation) 2462 3648 w
-10 /S f
-(_) 919 3692 w
-(______________________________________________________________________________) 940 3692 w
-10 /LucidaTypewriter f
-(coproc\(fn\(...\), stksize\)) 1041 3836 w
-10 /LucidaSansUnicode00 f
-(Starts a process in its own stack) 2991 3836 w
-10 /S f
-(_) 919 3880 w
-(______________________________________________________________________________) 940 3880 w
-10 /LucidaTypewriter f
-(cothread\(fn\(...\), stksize\)) 969 4024 w
-10 /LucidaSansUnicode00 f
-(Starts a thread in its own stack) 2991 4024 w
-10 /S f
-(_) 919 4044 w
-(______________________________________________________________________________) 940 4044 w
-(\347) 919 4044 w
-(\347) 919 4036 w
-(\347) 919 3936 w
-(\347) 919 3836 w
-(\347) 919 3736 w
-(\347) 919 3636 w
-(\347) 919 3536 w
-(\347) 919 3436 w
-(\347) 919 3336 w
-(\347) 919 3236 w
-(\347) 919 3136 w
-(\347) 919 3036 w
-(\347) 919 2936 w
-(\347) 919 2836 w
-(\347) 919 2736 w
-(\347) 919 2636 w
-(\347) 919 2536 w
-(\347) 919 2436 w
-(\347) 919 2336 w
-(\347) 919 2236 w
-(\347) 919 2136 w
-(\347) 919 2036 w
-(\347) 919 1936 w
-(\347) 919 1836 w
-(\347) 919 1736 w
-(\347) 919 1636 w
-(\347) 919 1536 w
-(\347) 2916 4044 w
-(\347) 2916 3992 w
-(\347) 2916 3892 w
-(\347) 2916 3792 w
-(\347) 4840 4044 w
-(\347) 4840 4036 w
-(\347) 4840 3936 w
-(\347) 4840 3836 w
-(\347) 4840 3736 w
-(\347) 4840 3636 w
-(\347) 4840 3536 w
-(\347) 4840 3436 w
-(\347) 4840 3336 w
-(\347) 4840 3236 w
-(\347) 4840 3136 w
-(\347) 4840 3036 w
-(\347) 4840 2936 w
-(\347) 4840 2836 w
-(\347) 4840 2736 w
-(\347) 4840 2636 w
-(\347) 4840 2536 w
-(\347) 4840 2436 w
-(\347) 4840 2336 w
-(\347) 4840 2236 w
-(\347) 4840 2136 w
-(\347) 4840 2036 w
-(\347) 4840 1936 w
-(\347) 4840 1836 w
-(\347) 4840 1736 w
-(\347) 4840 1636 w
-(\347) 4840 1536 w
+(_) 919 3348 w
+(______________________________________________________________________________) 940 3348 w
+(\347) 919 3348 w
+(\347) 919 3340 w
+(\347) 919 3240 w
+(\347) 919 3140 w
+(\347) 919 3040 w
+(\347) 919 2940 w
+(\347) 919 2840 w
+(\347) 919 2740 w
+(\347) 919 2640 w
+(\347) 919 2540 w
+(\347) 919 2440 w
+(\347) 919 2340 w
+(\347) 919 2240 w
+(\347) 919 2140 w
+(\347) 919 2040 w
+(\347) 919 1940 w
+(\347) 919 1840 w
+(\347) 919 1740 w
+(\347) 919 1640 w
+(\347) 919 1540 w
+(\347) 919 1440 w
+(\347) 919 1340 w
+(\347) 919 1240 w
+(\347) 919 1140 w
+(\347) 919 1040 w
+(\347) 919 940 w
+(\347) 919 840 w
+(\347) 2916 3348 w
+(\347) 2916 3296 w
+(\347) 2916 3196 w
+(\347) 2916 3096 w
+(\347) 4840 3348 w
+(\347) 4840 3340 w
+(\347) 4840 3240 w
+(\347) 4840 3140 w
+(\347) 4840 3040 w
+(\347) 4840 2940 w
+(\347) 4840 2840 w
+(\347) 4840 2740 w
+(\347) 4840 2640 w
+(\347) 4840 2540 w
+(\347) 4840 2440 w
+(\347) 4840 2340 w
+(\347) 4840 2240 w
+(\347) 4840 2140 w
+(\347) 4840 2040 w
+(\347) 4840 1940 w
+(\347) 4840 1840 w
+(\347) 4840 1740 w
+(\347) 4840 1640 w
+(\347) 4840 1540 w
+(\347) 4840 1440 w
+(\347) 4840 1340 w
+(\347) 4840 1240 w
+(\347) 4840 1140 w
+(\347) 4840 1040 w
+(\347) 4840 940 w
+(\347) 4840 840 w
 8 /LucidaSansUnicode00 f
-(Figure) 720 4240 w
-(1.) 1002 4240 w
-(Summary) 1142 4240 w
-(of) 1540 4240 w
-(compiler) 1657 4240 w
-(extensions) 2033 4240 w
-(and) 2494 4240 w
-(usage.) 2676 4240 w
+(Figure) 720 3544 w
+(1.) 1002 3544 w
+(Summary) 1142 3544 w
+(of) 1540 3544 w
+(compiler) 1657 3544 w
+(extensions) 2033 3544 w
+(and) 2494 3544 w
+(usage.) 2676 3544 w
 8 /LucidaTypewriter f
-(chan) 2997 4240 w
+(chan) 2997 3544 w
 8 /LucidaSansUnicode00 f
-(denotes) 3268 4240 w
-(a) 3617 4240 w
-(typed) 3700 4240 w
-(channel) 3956 4240 w
-(and) 4298 4240 w
+(denotes) 3268 3544 w
+(a) 3617 3544 w
+(typed) 3700 3544 w
+(channel) 3956 3544 w
+(and) 4298 3544 w
 8 /LucidaTypewriter f
-(val) 4481 4240 w
+(val) 4481 3544 w
 8 /LucidaSansUnicode00 f
-(is) 4694 4240 w
-(of) 4797 4240 w
-(the) 4915 4240 w
-(channel) 720 4340 w
+(is) 4694 3544 w
+(of) 4797 3544 w
+(the) 4915 3544 w
+(channel) 720 3644 w
 8 /LucidaSansUnicode20 f
-(\031) 1023 4340 w
+(\031) 1023 3644 w
 8 /LucidaSansUnicode00 f
-(s) 1049 4340 w
-(sending) 1116 4340 w
-(type.) 1451 4340 w
+(s) 1049 3644 w
+(sending) 1116 3644 w
+(type.) 1451 3644 w
 8 /LucidaTypewriter f
-(nelem) 1696 4340 w
+(nelem) 1696 3644 w
 8 /LucidaSansUnicode00 f
-(is) 2012 4340 w
-(an) 2102 4340 w
-(int,) 2222 4340 w
+(is) 2012 3644 w
+(an) 2102 3644 w
+(int,) 2222 3644 w
 8 /LucidaTypewriter f
-(fn) 2377 4340 w
+(fn) 2377 3644 w
 8 /LucidaSansUnicode00 f
-(is) 2519 4340 w
-(a) 2609 4340 w
-(function) 2679 4340 w
-(of) 3028 4340 w
-(any) 3133 4340 w
-(signature,) 3295 4340 w
-(and) 3713 4340 w
+(is) 2519 3644 w
+(a) 2609 3644 w
+(function) 2679 3644 w
+(of) 3028 3644 w
+(any) 3133 3644 w
+(signature,) 3295 3644 w
+(and) 3713 3644 w
 8 /LucidaTypewriter f
-(stksize) 3883 4340 w
+(stksize) 3883 3644 w
 8 /LucidaSansUnicode00 f
-(is) 4315 4340 w
-(an) 4405 4340 w
-(unsigned) 4525 4340 w
-(int.) 4910 4340 w
+(is) 4315 3644 w
+(an) 4405 3644 w
+(unsigned) 4525 3644 w
+(int.) 4910 3644 w
 10 /LucidaSans-Demi f
-(4.) 720 4680 w
-(Implementation) 873 4680 w
+(4.) 720 3984 w
+(Implementation Details) 873 3984 w
 10 /LucidaSansUnicode00 f
-(See /sys/src/cmd/cc/thread.c \(I will actually write something here soon I promise\).) 720 4836 w
+(The) 720 4140 w
+(extension) 946 4140 w
+(does) 1466 4140 w
+(two) 1742 4140 w
+(things:) 1962 4140 w
+(checks) 2342 4140 w
+(types) 2716 4140 w
+(and) 3020 4140 w
+(provides) 3246 4140 w
+(syntactic) 3708 4140 w
+(sugar) 4179 4140 w
+(for) 4496 4140 w
+(calls) 4681 4140 w
+(to) 4942 4140 w
+10 /LucidaTypewriter f
+(thread) 720 4260 w
+10 /LucidaSansUnicode00 f
+(\(2\).) 1152 4260 w
+(Threads) 720 4416 w
+(and) 1152 4416 w
+(processes) 1373 4416 w
+(are) 1895 4416 w
+(created) 2088 4416 w
+(by) 2488 4416 w
+(walking) 2644 4416 w
+(the) 3058 4416 w
+(argument) 3255 4416 w
+(list) 3765 4416 w
+(to) 3953 4416 w
+(find) 4093 4416 w
+(the) 4326 4416 w
+(number) 4523 4416 w
+(of) 4942 4416 w
+(arguments) 720 4536 w
+(to) 1317 4536 w
+(the) 1493 4536 w
+(function) 1726 4536 w
+(and) 2205 4536 w
+(then) 2463 4536 w
+(compiling) 2758 4536 w
+(a) 3315 4536 w
+(call) 3448 4536 w
+(to) 3689 4536 w
+10 /LucidaTypewriter f
+(rtthreadcreate) 3864 4536 w
+10 /LucidaSansUnicode00 f
+(in) 4949 4536 w
+10 /LucidaSans-Italic f
+(thread) 720 4656 w
+10 /LucidaSansUnicode00 f
+(\(2\).) 1043 4656 w
+(For example, given a call) 1268 4656 w
+10 /LucidaTypewriter f
+(cothread\(fn\(a, b, c\), 1024\);) 1152 4836 w
+10 /LucidaSansUnicode00 f
+(the) 720 5016 w
+(compiler) 934 5016 w
+(first) 1416 5016 w
+(checks) 1670 5016 w
+(the) 2059 5016 w
+(types) 2274 5016 w
+(of) 2593 5016 w
+(the) 2751 5016 w
+(arguments) 2966 5016 w
+(to) 3545 5016 w
+(the) 3703 5016 w
+(function) 3918 5016 w
+10 /LucidaTypewriter f
+(fn) 4379 5016 w
+10 /LucidaSansUnicode00 f
+(and) 4583 5016 w
+(then) 4823 5016 w
+(rewrites the above as) 720 5136 w
+10 /LucidaTypewriter f
+(rtthreadcreate\(1024, 3, fn, a, b, c\);) 1152 5316 w
+10 /LucidaSansUnicode00 f
+(The) 720 5496 w
+(library) 938 5496 w
+10 /LucidaSans-Italic f
+(thread) 1285 5496 w
+10 /LucidaSansUnicode00 f
+(\(2\)) 1608 5496 w
+(takes) 1774 5496 w
+(things) 2068 5496 w
+(from) 2408 5496 w
+(there.) 2677 5496 w
+(A) 2998 5496 w
+(call) 3104 5496 w
+(of) 3305 5496 w
+10 /LucidaTypewriter f
+(coproc) 3441 5496 w
+10 /LucidaSansUnicode00 f
+(is) 3911 5496 w
+(rewritten) 4029 5496 w
+(as) 4503 5496 w
+(a) 4647 5496 w
+(call) 4740 5496 w
+(to) 4942 5496 w
+10 /LucidaTypewriter f
+(rtproccreate) 720 5616 w
+10 /LucidaSansUnicode00 f
+(in the exact same way.) 1616 5616 w
+(Each) 720 5772 w
+(channel) 978 5772 w
+(declaration) 1391 5772 w
+(declares) 1966 5772 w
+(a) 2404 5772 w
+(new) 2495 5772 w
+(structure) 2726 5772 w
+(that) 3200 5772 w
+(holds) 3427 5772 w
+(both) 3729 5772 w
+(the) 3988 5772 w
+(channel) 4180 5772 w
+(and) 4594 5772 w
+(loca\255) 4811 5772 w
+(tions) 720 5892 w
+(for) 999 5892 w
+(sending) 1177 5892 w
+(and) 1601 5892 w
+(receiving) 1819 5892 w
+(values) 2295 5892 w
+(of) 2638 5892 w
+(the) 2774 5892 w
+(sending) 2967 5892 w
+(type) 3390 5892 w
+(of) 3636 5892 w
+(the) 3772 5892 w
+(channel.) 3965 5892 w
+(The) 4444 5892 w
+(channel) 4663 5892 w
+(itself is declared as a pointer to that struct. Thus, a channel declaration such as) 720 6012 w
+10 /LucidaTypewriter f
+(int @c;) 1152 6192 w
+10 /LucidaSansUnicode00 f
+(is rewritten by the compiler as) 720 6372 w
+10 /LucidaTypewriter f
+(struct {) 1152 6552 w
+(Channel;) 1512 6672 w
+(int @in;) 1512 6792 w
+(int @out;) 1512 6912 w
+(} *chan;) 1152 7032 w
+10 /LucidaSansUnicode00 f
+(In) 720 7212 w
+(this) 860 7212 w
+(rewrite) 1088 7212 w
+(the) 1474 7212 w
+(symbols) 1678 7212 w
+10 /LucidaTypewriter f
+(@in) 2127 7212 w
+10 /LucidaSansUnicode00 f
+(and) 2392 7212 w
+10 /LucidaTypewriter f
+(@out) 2621 7212 w
+10 /LucidaSansUnicode00 f
+(are) 2958 7212 w
+(not) 3159 7212 w
+(channels) 3368 7212 w
+(but) 3845 7212 w
+(the) 4057 7212 w
+(actual) 4262 7212 w
+(identifier) 4601 7212 w
 cleartomark
 showpage
 saveobj restore
 %%EndPage: 4 4
+%%Page: 5 5
+/saveobj save def
+mark
+5 pagesetup
+10 /LucidaSansUnicode00 f
+(\255 5 \255) 2783 480 w
+(used) 720 840 w
+(internally) 986 840 w
+(by) 1472 840 w
+(the) 1621 840 w
+(compiler) 1810 840 w
+(to) 2266 840 w
+(access) 2397 840 w
+(those) 2745 840 w
+(members) 3045 840 w
+(of) 3531 840 w
+(the) 3662 840 w
+(structure.) 3850 840 w
+(They) 4385 840 w
+(are) 4651 840 w
+(only) 4836 840 w
+(accessible within the compiler since) 720 960 w
+10 /LucidaTypewriter f
+(@) 2495 960 w
+10 /LucidaSansUnicode00 f
+(is reserved.) 2599 960 w
+(A more complicated type such as) 720 1116 w
+10 /LucidaTypewriter f
+(int \(*@*chan[3]\)\(int, double\);) 1152 1296 w
+10 /LucidaSansUnicode00 f
+(\(an) 720 1476 w
+(array) 927 1476 w
+(of) 1228 1476 w
+(three) 1383 1476 w
+(pointers) 1692 1476 w
+(to) 2149 1476 w
+(a) 2304 1476 w
+(channel) 2416 1476 w
+(that) 2850 1476 w
+(returns) 3098 1476 w
+(pointers) 3505 1476 w
+(to) 3962 1476 w
+(function) 4117 1476 w
+(pointers\),) 4575 1476 w
+(becomes) 720 1596 w
+10 /LucidaTypewriter f
+(struct {) 1152 1776 w
+(Channel;) 1512 1896 w
+(int \(*@in\)\(int, double\);) 1512 2016 w
+(int \(*@out\)\(int, double\);) 1512 2136 w
+(} **chan[3];) 1152 2256 w
+10 /LucidaSansUnicode00 f
+(In) 720 2436 w
+(other) 847 2436 w
+(words,) 1140 2436 w
+(if) 1501 2436 w
+(you) 1603 2436 w
+(read) 1814 2436 w
+(the) 2065 2436 w
+(declaration) 2257 2436 w
+(from) 2833 2436 w
+(the) 3102 2436 w
+(outer) 3294 2436 w
+(type) 3588 2436 w
+(inwards) 3833 2436 w
+(toward) 4248 2436 w
+(the) 4619 2436 w
+(sym\255) 4811 2436 w
+(bol,) 720 2556 w
+(then) 957 2556 w
+(everything) 1226 2556 w
+(before) 1787 2556 w
+(the) 2153 2556 w
+10 /LucidaTypewriter f
+(@) 2360 2556 w
+10 /LucidaSansUnicode00 f
+(symbol) 2484 2556 w
+(is) 2885 2556 w
+(associated) 3017 2556 w
+(with) 3578 2556 w
+(the) 3835 2556 w
+(sending) 4041 2556 w
+(type) 4477 2556 w
+(of) 4736 2556 w
+(the) 4885 2556 w
+(channel) 720 2676 w
+(and) 1135 2676 w
+(everything) 1353 2676 w
+(after) 1900 2676 w
+(is) 2164 2676 w
+(associated) 2282 2676 w
+(with) 2829 2676 w
+(the) 3072 2676 w
+(declaration) 3265 2676 w
+(of) 3842 2676 w
+(the) 3978 2676 w
+(the) 4171 2676 w
+(symbol) 4364 2676 w
+10 /LucidaTypewriter f
+(chan) 4752 2676 w
+10 /LucidaSansUnicode00 f
+(itself.) 720 2796 w
+(The call) 720 2952 w
+10 /LucidaTypewriter f
+(chanset\(chan, nelem\);) 1152 3132 w
+10 /LucidaSansUnicode00 f
+(allocates) 720 3312 w
+(memory) 1183 3312 w
+(for) 1618 3312 w
+(the) 1796 3312 w
+(channel) 1990 3312 w
+(and) 2406 3312 w
+(does) 2625 3312 w
+(further) 2895 3312 w
+(setup) 3270 3312 w
+(as) 3578 3312 w
+(needed) 3723 3312 w
+(for) 4119 3312 w
+10 /LucidaSans-Italic f
+(thread) 4298 3312 w
+10 /LucidaSansUnicode00 f
+(\(2\).) 4621 3312 w
+(It) 4854 3312 w
+(is) 4960 3312 w
+(syntactic sugar for the call) 720 3432 w
+10 /LucidaTypewriter f
+(chan = rtchancreate\(sizeof\(*chan\), sizeof\(chan->@in\), nelem\);) 720 3612 w
+10 /LucidaSansUnicode00 f
+(where) 720 3792 w
+10 /LucidaTypewriter f
+(chan) 1048 3792 w
+10 /LucidaSansUnicode00 f
+(has) 1372 3792 w
+(already) 1576 3792 w
+(been) 1963 3792 w
+(defined) 2236 3792 w
+(by) 2638 3792 w
+(the) 2789 3792 w
+(compiler) 2980 3792 w
+(to) 3439 3792 w
+(have) 3573 3792 w
+(a) 3834 3792 w
+(structure) 3957 3792 w
+(type) 4431 3792 w
+(like) 4676 3792 w
+(the) 4885 3792 w
+(examples above.) 720 3912 w
+(A channel receive operation) 720 4068 w
+10 /LucidaTypewriter f
+(val = @chan) 2140 4068 w
+10 /LucidaSansUnicode00 f
+(is rewritten as) 2964 4068 w
+10 /LucidaTypewriter f
+(recv\(c, c->@out\);) 1152 4248 w
+(val = c->@out;) 1152 4368 w
+10 /LucidaSansUnicode00 f
+(and in the case when there is no left hand side, then as) 720 4548 w
+10 /LucidaTypewriter f
+(recv\(c, c->@out\);) 1152 4728 w
+10 /LucidaSansUnicode00 f
+(alone.) 720 4908 w
+(A channel send expression) 1079 4908 w
+10 /LucidaTypewriter f
+(c @= val;) 1152 5088 w
+10 /LucidaSansUnicode00 f
+(is first type checked so that val is assignable to) 720 5268 w
+10 /LucidaTypewriter f
+(c->@in) 3050 5268 w
+10 /LucidaSansUnicode00 f
+(and then rewritten as) 3514 5268 w
+10 /LucidaTypewriter f
+(send\(c, &val\);) 1152 5448 w
+10 /LucidaSansUnicode00 f
+(In the case where) 720 5628 w
+10 /LucidaTypewriter f
+(val) 1599 5628 w
+10 /LucidaSansUnicode00 f
+(is not addressable, such as) 1847 5628 w
+10 /LucidaTypewriter f
+(c @= val1 + val2;) 1152 5808 w
+10 /LucidaSansUnicode00 f
+(then the compiler rewrites this as) 720 5988 w
+10 /LucidaTypewriter f
+(c->@in = val1 + val2;) 1152 6168 w
+(recv\(c, &c->@in\);) 1152 6288 w
+10 /LucidaSansUnicode00 f
+(The) 720 6504 w
+(alt-switch) 943 6504 w
+(statement) 1471 6504 w
+(is) 1998 6504 w
+(compiled) 2121 6504 w
+(by) 2609 6504 w
+(constructing) 2767 6504 w
+(an) 3416 6504 w
+10 /LucidaTypewriter f
+(Alt) 3576 6504 w
+10 /LucidaSansUnicode00 f
+(structure) 3835 6504 w
+(\(see) 4316 6504 w
+10 /LucidaSans-Italic f
+(thread) 4555 6504 w
+10 /LucidaSansUnicode00 f
+(\(2\)\)) 4878 6504 w
+(and) 720 6624 w
+(then) 942 6624 w
+(rewriting) 1201 6624 w
+(the) 1677 6624 w
+(alt-switch) 1874 6624 w
+(as) 2401 6624 w
+(a) 2548 6624 w
+(normal) 2644 6624 w
+(switch) 3026 6624 w
+(with) 3374 6624 w
+(case) 3620 6624 w
+(labels) 3874 6624 w
+(corresponding) 4198 6624 w
+(to) 4942 6624 w
+(the) 720 6744 w
+(value) 916 6744 w
+(returned) 1211 6744 w
+(by) 1671 6744 w
+(a) 1828 6744 w
+10 /LucidaTypewriter f
+(doalt) 1925 6744 w
+10 /LucidaSansUnicode00 f
+(call) 2327 6744 w
+(\(see) 2533 6744 w
+10 /LucidaSans-Italic f
+(thread\(2\)\)) 2771 6744 w
+10 /LucidaSansUnicode00 f
+(with) 3298 6744 w
+(the) 3545 6744 w
+10 /LucidaTypewriter f
+(Alt) 3742 6744 w
+10 /LucidaSansUnicode00 f
+(structure) 4000 6744 w
+(as) 4480 6744 w
+(an) 4628 6744 w
+(argu\255) 4787 6744 w
+(ment.) 720 6864 w
+(The example) 1064 6864 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 5 5
+%%Page: 6 6
+/saveobj save def
+mark
+6 pagesetup
+10 /LucidaSansUnicode00 f
+(\255 6 \255) 2783 480 w
+10 /LucidaTypewriter f
+(int @ichan, @req, i;) 1152 900 w
+(char *@schan, *s;) 1152 1020 w
+(s = "hello";) 1152 1260 w
+(switch @{) 1152 1380 w
+(alt i = @ichan:) 1152 1500 w
+(print\("%d\\n", i\);) 1512 1620 w
+(...) 1512 1740 w
+(break;) 1512 1860 w
+(alt @req:) 1152 1980 w
+(...) 1512 2100 w
+(break;) 1512 2220 w
+(alt schan @= s:) 1152 2340 w
+(print\("Sent hello\\n"\);) 1512 2460 w
+(...) 1512 2580 w
+(break;) 1512 2700 w
+(default:) 1152 2820 w
+(print\("Interrupted!\\n"\);) 1512 2940 w
+(}) 1152 3060 w
+10 /LucidaSansUnicode00 f
+(is rewritten as) 720 3240 w
+10 /LucidaTypewriter f
+(int @ichan, @req, i;) 1152 3420 w
+(char *@schan, *s;) 1152 3540 w
+(s = "hello";) 1152 3780 w
+(struct Alt alts[] = {) 1152 4020 w
+({ichan, &i, CHANRCV},) 1512 4140 w
+({req, nil, CHANRCV},) 1512 4260 w
+({schan, &s, CHANSND},) 1512 4380 w
+({nil, nil, CHANEND}) 1512 4500 w
+(};) 1152 4620 w
+(switch\(doalt\(alts\)\) {) 1152 4740 w
+(case 0:) 1152 4860 w
+(print\("%d\\n", i\);) 1512 4980 w
+(...) 1512 5100 w
+(break;) 1512 5220 w
+(case 1:) 1152 5340 w
+(...) 1512 5460 w
+(break;) 1512 5580 w
+(case 2:) 1152 5700 w
+(print\("Sent hello\\n"\);) 1512 5820 w
+(...) 1512 5940 w
+(break;) 1512 6060 w
+(default:) 1152 6180 w
+(print\("Interrupted!\\n"\);) 1512 6300 w
+(}) 1152 6420 w
+10 /LucidaSansUnicode00 f
+(The) 720 6600 w
+(appropriate) 937 6600 w
+(type) 1537 6600 w
+(checking) 1781 6600 w
+(takes) 2248 6600 w
+(place) 2541 6600 w
+(on) 2831 6600 w
+(the) 2990 6600 w
+(values) 3181 6600 w
+(being) 3522 6600 w
+(sent) 3830 6600 w
+(or) 4072 6600 w
+(received) 4210 6600 w
+(in) 4650 6600 w
+(order) 4778 6600 w
+(to preserve type safety.) 720 6720 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 6 6
 %%Trailer
 done
-%%Pages: 4
+%%Pages: 6

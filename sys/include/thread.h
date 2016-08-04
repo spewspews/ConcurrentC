@@ -59,6 +59,16 @@ struct Ref {
 	long	ref;
 };
 
+struct	Keyboardctl
+{
+	Rune	@c;
+
+	char		*file;
+	int		consfd;		/* to cons file */
+	int		ctlfd;		/* to ctl file */
+	int		pid;		/* of slave proc */
+};
+
 int	doalt(Alt alts[]);
 int	chanclose(Channel*);
 int	chanclosing(Channel *c);
@@ -105,8 +115,7 @@ int	threadid(void);
 int	threadpid(int);
 int	threadsetgrp(int);		/* set thread group, return old */
 void	threadsetname(char *fmt, ...);
-Waitmsg *@threadwaitchanext(void);
-Channel*threadwaitchan(void);
+Waitmsg *@threadwaitchan(void);
 void	yield(void);
 
 #pragma	varargck	argpos	threadsetname	1

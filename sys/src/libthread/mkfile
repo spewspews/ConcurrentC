@@ -64,6 +64,7 @@ CFILES=\
 
 SFILES=\
 	launcheramd64.s\
+	launcher386.s\
 
 HFILES=\
 	/sys/include/thread.h\

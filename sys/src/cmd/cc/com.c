@@ -923,7 +923,7 @@ recvs(Com *com, Node *n)
 }
 
 int
-recv(Node *n)
+recv(Node *n, int v)
 {
 	Com com;
 	Node *nn;
@@ -934,8 +934,12 @@ recv(Node *n)
 	nn = recvs(&com, n);
 	if(com.n > 0)
 		r = 1;
-	if(nn != n)
-		*n = *com.t[--com.n];
+	if(nn != n) {
+		if(v)
+			*n = *nn;
+		else
+			*n = *com.t[--com.n];
+	}
 	while(com.n > 0) {
 		nn = new(OXXX, Z, Z);
 		*nn = *n;

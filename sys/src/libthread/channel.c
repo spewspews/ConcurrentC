@@ -37,7 +37,6 @@ _chanfree(Channel *c)
 	else{
 		if(c->qentry)
 			free(c->qentry);
-		free(c->v);
 		free(c);
 	}
 }
@@ -55,10 +54,10 @@ rtchancreate(int size, int elemsize, int elemcnt)
 {
 	Channel *c;
 
-	c = _threadmalloc(size, 1);
+	c = _threadmalloc(size+elemcnt*elemsize, 1);
 	c->e = elemsize;
 	c->s = elemcnt;
-	c->v = _threadmalloc(elemcnt*elemsize, 1);
+	c->v = (uchar*)c + size;
 	return c;
 }
 
@@ -69,10 +68,10 @@ chancreate(int elemsize, int elemcnt)
 
 	if(elemcnt < 0 || elemsize <= 0)
 		return nil;
-	c = _threadmalloc(sizeof(*c), 1);
+	c = _threadmalloc(sizeof(*c)+elemcnt*elemsize, 1);
 	c->e = elemsize;
 	c->s = elemcnt;
-	c->v = _threadmalloc(elemcnt*elemsize, 1);
+	c->v = (uchar*)(c+1);
 	_threaddebug(DBGCHAN, "chancreate %p", c);
 	return c;
 }

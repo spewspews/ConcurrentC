@@ -171,7 +171,7 @@ void
 _schedexecwait(void)
 {
 	int pid;
-	Channel *c;
+	Waitmsg *@c;
 	Proc *p;
 	Thread *t;
 	Waitmsg *w;
@@ -192,7 +192,7 @@ _schedexecwait(void)
 	}
 	if(w != nil){
 		if((c = _threadwaitchan) != nil)
-			sendp(c, w);
+			c @= w;
 		else
 			free(w);
 	}

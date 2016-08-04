@@ -3,22 +3,17 @@
 #include <thread.h>
 #include "threadimpl.h"
 
-static void
-launcher386(void (*f)(void *arg), void *arg)
-{
-	(*f)(arg);
-	threadexits(nil);
-}
+void launcher386(void);
 
 void
-_threadinitstack(Thread *t, void (*f)(void*), void *arg)
+_threadinitstack(Thread *t, int argc, void *fn, void *argv)
 {
-	ulong *tos;
+	uintptr *tos, *sp;
 
-	tos = (ulong*)&t->stk[t->stksize&~7];
-	*--tos = (ulong)arg;
-	*--tos = (ulong)f;
-	t->sched[JMPBUFPC] = (ulong)launcher386+JMPBUFDPC;
-	t->sched[JMPBUFSP] = (ulong)tos - 8;		/* old PC and new PC */
+	tos = sp = (uintptr*)(t->stk + (t->stksize&~7)) - (argc+2);
+	*sp++ = (uintptr)fn;
+	*sp++ = (uintptr)_threadexitsnil;
+	memcpy(sp, argv, argc*sizeof(uintptr));
+	t->sched[JMPBUFPC] = (uintptr)launcher386 + JMPBUFDPC;
+	t->sched[JMPBUFSP] = (uintptr)tos - sizeof(uintptr);
 }
-

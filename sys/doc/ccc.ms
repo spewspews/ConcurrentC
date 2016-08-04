@@ -1,5 +1,5 @@
 .TL
-The Plan 9 Front Concurrent C Extensions
+Spew's Plan 9 Front Concurrent C Extension
 .AU
 Benjamin Purcell (spew)
 benjapurcell@gmail.com
@@ -31,13 +31,18 @@ infrastructure such as Alef. This document assumes
 familiarity with
 .I thread (2).
 .NH
-The Extensions
+The Extension
 .LP
 The compiler extension provides for launching
 new threads and processes, declaring and allocating storage
 for typed channels, and type safe sending and receiving from
-channels. It also provides a new control structure
-for type safe sending or receiving of multiple channels.
+channels. It also provides a new control structure for type
+safe sending or receiving of multiple channels. The extension
+functions by making calls into the
+.I thread (2)
+library; any program using the extension must include the
+.CW <thread.h>
+header.
 .NH 2
 Thread and Process Creation
 .LP
@@ -404,11 +409,10 @@ Implementation Details
 .LP
 The extension does two things: checks types and provides
 syntactic sugar for calls to
-.CW thread (2).
+.I thread (2).
 .LP
 Threads and processes are created by walking the argument
-list to find the number of arguments to the function and
-then compiling a call to
+list and then compiling a call to
 .CW rtthreadcreate
 in
 .I thread (2).
@@ -453,7 +457,7 @@ is rewritten by the compiler as
 		Channel;
 		int @in;
 		int @out;
-	} *chan;
+	} *c;
 .DE
 In this rewrite the symbols
 .CW @in " "
@@ -469,7 +473,7 @@ A more complicated type such as
 .DS
 .CW
 .TA .1i
-	int (*@*chan[3])(int, double);
+	int (*@*c[3])(int, double);
 .DE
 (an array of three pointers to a channel that returns
 pointers to function pointers), becomes
@@ -480,7 +484,7 @@ pointers to function pointers), becomes
 		Channel;
 		int (*@in)(int, double);
 		int (*@out)(int, double);
-	} **chan[3];
+	} **c[3];
 .DE
 In other words, if you read the declaration from the
 outer type inwards toward the symbol, then everything
@@ -496,7 +500,7 @@ The call
 .DS
 .CW
 .TA .1i
-	chanset(chan, nelem);
+	chanset(c, nelem);
 .DE
 allocates memory for the
 channel and does further setup as needed for
@@ -504,7 +508,7 @@ channel and does further setup as needed for
 It is syntactic sugar for the call
 .DS C
 .CW
-chan = rtchancreate(sizeof(*chan), sizeof(chan->@in), nelem);
+c = rtchancreate(sizeof(*c), sizeof(c->@in), nelem);
 .DE
 where
 .CW chan
@@ -556,7 +560,7 @@ then the compiler rewrites this as
 .CW
 .TA .1i
 	c->@in = val1 + val2;
-	recv(c, &c->@in);
+	send(c, &c->@in);
 .DE
 .LP
 The alt-switch statement is compiled by constructing an
@@ -571,7 +575,7 @@ call (see
 with the
 .CW Alt
 structure as an argument.
-The example
+The following
 .DS
 .CW
 .TA .1i .6i 1.1i
@@ -595,7 +599,7 @@ The example
 		print("Interrupted!\en");
 	}
 .DE
-is rewritten as
+is rewritten by the compiler as
 .DS
 .CW
 .TA .1i .6i 1.1i
@@ -603,7 +607,6 @@ is rewritten as
 	char *@schan, *s;
 
 	s = "hello";
-
 	struct Alt alts[] = {
 		{ichan, &i, CHANRCV},
 		{req, nil, CHANRCV},
